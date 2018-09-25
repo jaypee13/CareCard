@@ -12,9 +12,9 @@ $db['default'] = array(
 	// 'password' => 'John17:3@',
 
 	//AZURE WEBSERVER
-	// 'hostname' => 'tcp:jms.database.windows.net,1433',
-	// 'username' => 'jmsolution@jms',
-	// 'password' => 'John17:31914',
+	'hostname' => 'tcp:jms.database.windows.net,1433',
+	'username' => 'jmsolution@jms',
+	'password' => 'John17:31914',
 
 	//OFFICE
 	//'hostname' => '172.25.9.126\SQLEXPRESS',
@@ -22,9 +22,9 @@ $db['default'] = array(
 	//'password' => 'john17:3',
 
 	//HOUSE
-	'hostname' => 'JMS-PC\SQLEXPRESS',
-	'username' => 'sa',
-	'password' => 'john17:3',
+	// 'hostname' => 'JMS-PC\SQLEXPRESS',
+	// 'username' => 'sa',
+	// 'password' => 'john17:3',
 
 	//MARK
 	// 'hostname' => 'DESKTOP-1ROJ555',

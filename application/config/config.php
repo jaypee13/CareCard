@@ -25,10 +25,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 // $config['base_url'] = 'http://localhost:8080/CareCard';
 //$config['base_url'] = 'http://localhost:8666/CareCard';
-
-// $config['base_url'] = 'http://silangcard.com/';
-// $config['base_url'] = 'http://taytaycarecard.com/';
-// $config['base_url'] = 'https://carecard.azurewebsites.net';
 // $config['base_url'] = 'http://localhost:8567/AzureCard';
 $config['base_url'] = 'http://localhost:8567/CareCard';
 

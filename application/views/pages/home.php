@@ -20,7 +20,7 @@
         
 
         <img onclick="imageClick('<?php base_url(); ?>login')" style="height: 30px; width: 200px; margin-left: auto; margin-right: auto; display: block; cursor: pointer;" src="<?php echo base_url(); ?>public/images/clickheretologin.png" alt="Member image">
-
+ 
     
       <span class="text2" style="margin: 8px 0px 0px;">ANO ANG PANGUNAHING BENEPISYO NG CARD NA ITO?</span>
       <label class="text3" style="padding: 6px;">Bukod sa magkakaron ka ng isang valid Government ID, mabibigyan din ang mga residente na karagdagang benepisyo sa gamot, hospitalisasyon, insurance, at iba pa. Upang makita ang buong benepisyo, buksan ang link na ito <a href="<?php base_url(); ?>Benefits">Membership and Benefits</a></label>
