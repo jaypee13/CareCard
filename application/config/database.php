@@ -7,14 +7,14 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	//GODADDY WEBSERVER
-	// 'hostname' => '132.148.148.238\MSSQLSERVER2014,1433',
-	// 'username' => 'JMSAdmin',
-	// 'password' => 'John17:3@',
+	'hostname' => '132.148.148.238\MSSQLSERVER2014',
+	'username' => 'JMSAdmin',
+	'password' => 'John17:3@',
 
 	//AZURE WEBSERVER
-	'hostname' => 'tcp:jms.database.windows.net,1433',
-	'username' => 'jmsolution@jms',
-	'password' => 'John17:31914',
+	// 'hostname' => 'tcp:jms.database.windows.net,1433',
+	// 'username' => 'jmsolution@jms',
+	// 'password' => 'John17:31914',
 
 	//OFFICE
 	//'hostname' => '172.25.9.126\SQLEXPRESS',
