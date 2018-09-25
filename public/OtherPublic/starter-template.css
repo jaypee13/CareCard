@@ -1,0 +1,368 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.img-valign {
+  vertical-align: middle;
+  margin-bottom: 0.15em;
+}
+
+.text1 {
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    padding: 6px;
+    margin: 3px 0;
+}
+
+
+.text2 {
+    font-size: 16px;
+    font-family: Calibri;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 6px;
+    margin: 0px 0;
+    display: block;
+}
+
+.text3 {
+    font-size: 16px;
+    font-family: Calibri;
+}
+
+.text4 {
+    font-size: 16px;
+    font-family: Calibri;
+    background-color: #f4f4f4;
+    display: block;
+}
+
+.text5 {
+    font-size: 16px;
+    font-family: Calibri;
+    display: block;
+}
+
+.textHome1 {
+    font-size: 18px;
+    font-family: Calibri;
+    font-weight: bold;
+    background-color: #f4f4f4;
+    padding: 6px;
+    margin: 0px 0;
+    display: block;
+}
+
+.textHome2 {
+    font-size: 18px;
+    font-family: Calibri;
+}
+
+.textRegisterHome {
+    font-size: 16px !important;
+    font-family: Calibri;
+    padding: 6px;
+    margin: 0px 0;
+    display: block;
+    
+}
+
+html,body { height:100%; }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    vertical-align: middle;
+
+}
+
+.center-div
+{
+  position: top;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*width: 1300px;*/
+  width: 100%;
+  /*height: 100px;*/
+  background-color: #bbb;
+  border-radius: 3px;
+}
+
+.center-div2
+{
+  position: top;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /*width: 1300px;*/
+  width: 100%;
+  /*height: 100px;*/
+/*  border-radius: 3px;*/
+}
+
+.frame {  
+    height: 100px; /*can be anything*/
+    width: 560px; /*can be anything*/
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+.imgCenter {  
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 50%;*/
+    vertical-align: middle;
+    padding: 0px 0px 0px 0px;
+    display: block;
+}
+.imgCenter2 {  
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+    padding: 0px 0px 0px 0px;
+    display: block;
+}
+.imgCenter3 {  
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: top;
+    padding: 0px 0px 0px 0px;
+    display: block;
+}
+.post-date{
+    background-color: #f4f4f4;
+    padding: 4px;
+    margin: 3px 0;
+    display: block;
+}
+
+.header-remarks{
+    background-color: #f4f4f4;
+    padding: 4px;
+    margin: 3px 0;
+    display: block;
+    font: red;
+}
+
+.table-contents{
+    margin: 0px 0;
+    color: black;
+    font-size: 9px;
+    width: 100%;
+    float:left;
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table-header{
+    padding: 0px;
+    margin: 0px 0;
+    text-align: center;
+    style: background-color: #ADD8E6;
+}
+
+
+th {
+    height: 10px;
+
+}
+
+tr {
+    font-size: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #F8F8FF;
+
+}
+
+.normal-font{
+    margin: 0px 0;
+    color: black;
+    font-size: 14px;
+    width: 100%;
+    padding: 1px;
+    border: none;
+}
+
+/* ENLARGE IMAGE */
+#myImgBG {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 100;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+    display: block;
+
+}
+
+#myImgBG:hover {
+    opacity: 0.7;
+}
+
+#myImgBG2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    opacity: 100;
+    filter: alpha(opacity=100);  /* For IE8 and earlier */
+    display: block;
+    background-color: white;
+
+}
+
+#myImgBG2:hover {opacity: 100;}
+
+
+/* The Modal (background) */
+.modalBG {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 130px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); 
+}
+
+/* Modal Content (image) */
+.modalBG-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    background-color: white;
+}
+
+/* Caption of Modal Image */
+#captionBG {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+
+}
+
+/* Add Animation */
+.modalBG-content, #captionBG {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeBG {
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeBG:hover,
+.closeBG:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modalBG-content {
+        width: 100%;
+    }
+}
+
+/* ENLARGE IMAGE LAST */
+.gradiant-bg {
+background-color: rgb(230, 230, 230);
+
+}
+
+.ahref-disabled {
+   pointer-events: none;
+   cursor: default;
+   color: rgb(230, 230, 230);
+}
+
+.ahref-disabled2 {
+   pointer-events: none;
+   cursor: default;
+   color: black;
+}
+
+.ahref-enabled {
+   pointer-events: auto;
+   cursor: pointer;
+   color: black;
+}
+
+div.centerDiv {
+    width: 100%;
+    text-align: center;
+    border: 1px solid red;
+    align: left;
+}
+div.leftDiv {
+    width: 100%;
+    text-align: left;
+}
+ul.centerUL {
+    margin: 2px auto;
+    line-height: 1.4;
+    padding-left: 0;
+}
+.centerUL li {
+    display: inline;
+    text-align: center;
+}
