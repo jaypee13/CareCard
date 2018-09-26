@@ -7,9 +7,9 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	//GODADDY WEBSERVER
-	'hostname' => '132.148.148.238\MSSQLSERVER2014',
-	'username' => 'JMSAdmin',
-	'password' => 'John17:3@',
+	// 'hostname' => '132.148.148.238\MSSQLSERVER2014',
+	// 'username' => 'JMSAdmin',
+	// 'password' => 'John17:3@',
 
 	//AZURE WEBSERVER
 	// 'hostname' => 'tcp:jms.database.windows.net,1433',
@@ -22,9 +22,9 @@ $db['default'] = array(
 	//'password' => 'john17:3',
 
 	//HOUSE
-	// 'hostname' => 'JMS-PC\SQLEXPRESS',
-	// 'username' => 'sa',
-	// 'password' => 'john17:3',
+	'hostname' => 'JMS-PC\SQLEXPRESS',
+	'username' => 'sa',
+	'password' => 'john17:3',
 
 	//MARK
 	// 'hostname' => 'DESKTOP-1ROJ555',

@@ -66,7 +66,7 @@ tr {
 		    </div>
 		  </div>
 	</div>
-	<div class="panel-transparent border left" style="border: 0px solid; border-color: gray; min-width: 300px; width: 600px; max-width:100%; padding:5px; margin:0.2">
+	<div class="panel-transparent border left" style="border: 0px solid; border-color: gray; min-width: 300px; width: 550px; max-width:100%; padding:5px; margin:0.2">
 		<div id="demo" class="carousel slide" data-ride="carousel">
 		  <!-- Indicators -->
 		  <ul class="carousel-indicators">

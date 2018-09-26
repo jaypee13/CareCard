@@ -29,12 +29,12 @@
       height: 100%;
     }
     body {
-      background-color: #F8F8FF;
-      /*background-image: url("<?php echo base_url(); ?>public/images/bg1.jpg");
+      /*background-color: #F8F8FF;*/
+      background-image: url("<?php echo base_url(); ?>public/images/bg1.jpg");
       background-position: center bottom;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-size: cover;*/
+      background-size: cover;
     }
 
      
@@ -51,22 +51,22 @@
     }
 
     .opaque-navbar.opaque {
-        background-color: darkred;
+        background-color: rgba(0,0,0,0.7);
         height: 100%;
         transition: background-color .5s ease 0s;
     }
 
     ul.dropdown-menu {
-        background-color: darkred;
+        background-color: rgba(0,0,0,0.7);
     }
 
     @media (max-width: 100%) {
         body
         {
-          background:darkred;
+          background-color: rgba(0,0,0,0.7);
         }
         .opaque-navbar {
-          background-color: darkred;
+          background-color: rgba(0,0,0,0.7);
           height: 100%;
           transition: background-color .5s ease 0s;
         }
@@ -95,7 +95,7 @@
         <!-- <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: darkred; border-bottom: 6px solid red;"> -->
         <nav class="navbar navbar-inverse navbar-fixed-top opaque-navbar navbar-expand-lg" style="border-bottom: 6px;">
           <a class="navbar-brand" href="" class="">
-              <img src="<?php echo base_url(); ?>public\images\taytayseal.png" style="margin: 0px; padding: 0px;" >
+              <img src="<?php echo base_url(); ?>public\images\silangseal.png" style="margin: 0px; padding: 0px;" >
           </a>
           <a class="navbar-toggler navbar-toggler-right collapsed nav-menu" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation" style="width: 60px; text-align: center; height: 50px">
               <img class="center-div2" src="<?php echo base_url(); ?>public\images\dropdown.png" style="text-align: center;">
