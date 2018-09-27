@@ -23,20 +23,20 @@ tr {
 		    <div class="card">
 		      <div class="card-header" style="padding:0px;">
 		        <a class="card-link textHome1" data-toggle="collapse" href="#collapseOne">
-		          &nbsp;&nbsp;Anu-ano ang mga Benepisyo ng Taytay Care Card? (Benefits)
+		          &nbsp;&nbsp;Anu-ano ang mga Benepisyo ng Care Card? (Benefits)
 		        </a>
 		      </div>
 		      <div id="collapseOne" class="collapse" data-parent="#accordion">
 		        <div class="card-body">
 			        <span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">
 			        	<ul>
-						  <li>Pinapatunayan na ikaw ay isang lehitimong residente ng Taytay.</li>
+						  <li>Pinapatunayan na ikaw ay isang lehitimong residente ng Silang.</li>
 						  <li>Lahat ng Registered Government Records ay Nakapaloob sa Isang Card (SSS/GSIS, Drivers License, Voters ID, PhilHealth, Senior ID, TIN, NBI Clearance, etc).</li>
-						  <li>Mas madaling pagabot sa mga serbisyo at iba pang programa ng Taytay tulad ng Edukasyon, Kalusugan, Calamity Aid, Misyong Medikal, at Programang Pambata.</li>
+						  <li>Mas madaling pagabot sa mga serbisyo at iba pang programa ng Silang tulad ng Edukasyon, Kalusugan, Calamity Aid, Misyong Medikal, at Programang Pambata.</li>
 						  <li><b>Accidental Insurance Coverage</b> na walang karagdagang halaga (libre). Tig-sampung libong piso (10,000) para sa Accidental Dismemberment at Accidental Death.</li>
 						  <li>Sa <b>GENERIKA</b> ay magkakaron ng 5% to 10% discount ang generic at branded na gamot. Libreng gamot mula sa points at libreng konsulta tuwing iikot sa barangay.</li>
 						  <li>Abot kayang laboratory tests sa <b>MEDCENTRAL (SM Taytay)</b>. Magkakaroon ng 30% to 67% discounts sa ibat-ibang laboratory tests at diagnostics. Konsulta sa doktor.</li>
-						  <li>Tulong at Serbisyo medikal mula sa <b>Taytay Emergency Hospital</b>.</li>
+						  <li>Tulong at Serbisyo medikal mula sa <b>Silang Emergency Hospital</b>.</li>
 						  <li>Tinatanggap ng bangko tulad ng <b>BPI</b>.</li>
 						</ul>
 			        </span>
@@ -46,7 +46,7 @@ tr {
 		    <div class="card">
 		      <div class="card-header" style="padding:0px;">
 		        <a class="collapsed card-link textHome1" data-toggle="collapse" href="#collapseTwo">
-		        &nbsp;&nbsp;Mga Karagdagang Benepisyo ng Taytay Care Card (Addtl Benefits)
+		        &nbsp;&nbsp;Mga Karagdagang Benepisyo ng Care Card (Addtl Benefits)
 		      </a>
 		      </div>
 		      <div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -71,7 +71,7 @@ tr {
 			        <span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">Ang additional benefit na ito ay nagkakahalaga lamang na 1,499 pesos sa loob ng isang taon.</span>
 			        <br/>
 			        <br/>
-			        <span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">Maaari rin makakuha ng karagdagang serbisyo sa <b>MEDCENTRAL (SM Taytay)</b> tulad ng:</span>
+			        <span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">Maaari rin makakuha ng karagdagang serbisyo sa <b>MEDCENTRAL (Silang)</b> tulad ng:</span>
 			        <span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">
 			        	<ul>
 						  <li><b>Annual Physical Exam (APE)</b> - Doctors examination, CBC Blood Test, Chest X-ray, Urinalysis, Stool Analysis. Makukuha ang serbisyong ito sa halagang 280 pesos lamang.</li>
@@ -91,7 +91,7 @@ tr {
 		      </div>
 		      <div id="collapseThree" class="collapse" data-parent="#accordion">
 		        <div class="card-body">
-		        	<span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">BenLife Accreddited Hospitals and Clinics within Taytay Rizal.</span>
+		        	<span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">BenLife Accreddited Hospitals and Clinics within Silang Cavite.</span>
 			        <span class="textHome2" style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px;">    
 						  <table class="table table-hover">
 						    <thead>

@@ -24,12 +24,10 @@
     <style type="text/css">
       { margin: 0; padding: 0; }
       
-      
     html, body {
       height: 100%;
     }
     body {
-      /*background-color: #F8F8FF;*/
       background-image: url("<?php echo base_url(); ?>public/images/bg1.jpg");
       background-position: center bottom;
       background-repeat: no-repeat;
@@ -92,7 +90,6 @@
     <?php include("functions.php"); 
     login_session();  ?>
     <div class="fixed-top" style="">
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: darkred; border-bottom: 6px solid red;"> -->
         <nav class="navbar navbar-inverse navbar-fixed-top opaque-navbar navbar-expand-lg" style="border-bottom: 6px;">
           <a class="navbar-brand" href="" class="">
               <img src="<?php echo base_url(); ?>public\images\silangseal.png" style="margin: 0px; padding: 0px;" >

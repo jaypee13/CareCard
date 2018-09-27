@@ -6,14 +6,14 @@
 <br/>
 <main role="main" class="container-fluid">
 <div class="row align-items-top justify-content-center">
-    <div class="panel-transparent left" style="height: 100%; width: 600px; min-width: 300px; max-width: 100%; padding: 4px; margin:0.2; padding-right: 6px;">
+    <div class="panel-transparent border left" style="height: 100%; width: 600px; min-width: 300px; max-width: 100%; padding: 4px; margin:0.2; padding-right: 6px;">
         <img class="center2" style="width: 100%" src="<?php echo base_url(); ?>public/images/homepage.png" alt="Home image">
     </div>
     <div class="panel-transparent border left" style="min-width: 300px; width: 600px; max-width: 100%; padding: 4px; margin:0.2;">
-      <span class="text2" style="margin: 0px 0px 4px;"><b>SILANGUENO CARD - </b> Proyektong ibinahagi sa mga mamamayan ng Silang Cavite mula sa SANGUNIANG BAYAN at Mayor Omil Poblete.</span>
+      <span class="text2" style="margin: 0px 0px 4px;"><b>SILANGUENO CARE CARD - </b> Proyektong ibinahagi sa mga mamamayan ng Silang Cavite mula sa SANGUNIANG BAYAN at Mayor Omil Poblete.</span>
       
       <div>
-        <span class="text3" style="margin: 0px 0px 10px; padding: 6px;">INTERESADO KABA MAKAKUHA NG SILANGUENO CARD? <a style="font-size:14px;" href="<?php base_url(); ?>FAQs">(PARAAN NG PAGKUHA NG CARD)</a></span>
+        <span class="text3" style="margin: 0px 0px 10px; padding: 6px;">INTERESADO KABA MAKAKUHA NG SILANGUENO CARE CARD? <a style="font-size:14px;" href="<?php base_url(); ?>FAQs">(PARAAN NG PAGKUHA NG CARD)</a></span>
       </div>
       
         <span class="text2" style="margin: 4px 0px 10px;">KUNG IKAW AY MYEMBRO, MAARI MO NA MAKITA ANG IYONG RECORD.</span>
