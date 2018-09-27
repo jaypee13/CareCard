@@ -84,7 +84,7 @@ class Register extends CI_Controller {
 			'dteAdded'			   => $dteServer,
 			'strUser'			   => 'ONLINE',
 			'strLGUNo'			   => '',
-			'strCtrlNo'			   => $ctrlno,
+			'strCtrlNo'			   => $ctrlno
 		);
 
 		$this->db->insert('tblConstituent', $input);
