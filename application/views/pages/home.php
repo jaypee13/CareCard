@@ -13,7 +13,7 @@
       <span class="text2" style="margin: 0px 0px 4px;"><b>SILANGUENO CARE CARD - </b> Proyektong ibinahagi sa mga mamamayan ng Silang Cavite mula sa SANGUNIANG BAYAN at Mayor Omil Poblete.</span>
       
       <div>
-        <span class="text3" style="margin: 0px 0px 10px; padding: 6px;">INTERESADO KABA MAKAKUHA NG SILANGUENO CARE CARD? <a style="font-size:14px;" href="<?php base_url(); ?>FAQs">(PARAAN NG PAGKUHA NG CARD)</a></span>
+        <span class="text3" style="margin: 0px 0px 10px; padding: 6px;">INTERESADO KABA MAKAKUHA NG CARE CARD? <a style="font-size:14px;" href="<?php base_url(); ?>FAQs">(PARAAN NG PAGKUHA NG CARD)</a></span>
       </div>
       
         <span class="text2" style="margin: 4px 0px 10px;">KUNG IKAW AY MYEMBRO, MAARI MO NA MAKITA ANG IYONG RECORD.</span>
