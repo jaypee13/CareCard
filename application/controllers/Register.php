@@ -16,7 +16,7 @@ class Register extends CI_Controller {
 
 		$tmpQuery = "Select cast(FLOOR(RAND(CHECKSUM(NEWID()))*(999999-100000)+100000) as nvarchar)";
         $query = $this->db->query($tmpQuery);
-        $lguId = 'CTRLNO' . $query->CTRLNO;
+        $ctrlno = 'CTRLNO' . $query->CTRLNO;
 
 		// $lgu = $this->db->select('strLGUNo')->order_by('id',"desc")->limit(1)->get('tblConstituent')->row();
 		// $lguId = str_pad($lgu->strLGUNo + 1, 7, '0', STR_PAD_LEFT);
@@ -83,7 +83,8 @@ class Register extends CI_Controller {
 			'strStat'			   => 'PEN',
 			'dteAdded'			   => $dteServer,
 			'strUser'			   => 'ONLINE',
-			'strLGUNo'			   => $lguId
+			'strLGUNo'			   => '',
+			'strCtrlNo'			   => $ctrlno,
 		);
 
 		$this->db->insert('tblConstituent', $input);
