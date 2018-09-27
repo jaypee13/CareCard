@@ -175,7 +175,7 @@ class Register extends CI_Controller {
 
 		$this->db->insert('tblConstituentDocu', $documents);
 
-		redirect('/register/success?lgu='. $lguId . '&pwd=', 'refresh');
+		redirect('/register/success?lgu='. $ctrlno . '&pwd=', 'refresh');
 	}
 
 	public function success()
