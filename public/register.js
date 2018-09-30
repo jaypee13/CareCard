@@ -9,9 +9,15 @@ $(document).ready(function() {
 
 	$('input[type="date"]').on("keyup keypress", function() {
 		var inputedDate = new Date($(this).val());
-		var date = new Date();
-		if (date.getYear() < inputedDate.getYear()) {
-			$("");
+		var date = new Date().getTime();
+		console.log($(this).val());
+		var idate = $(this)
+			.val()
+			.split("-");
+		idate = new Date(idate[0], idate[1] - 1, idate[2]).getTime();
+
+		if (date - idate < 0) {
+			$(this).val("");
 		}
 	});
 
@@ -42,6 +48,10 @@ $(document).ready(function() {
 		if ($(value).data("active") === true) {
 			$(value).show();
 		}
+	});
+
+	$("button.register").on("click", function() {
+		$("form#register").submit();
 	});
 
 	$(document).keypress(function(event) {
@@ -159,89 +169,114 @@ $(document).ready(function() {
 	$('input[name="senior"]').on("click", function() {
 		if ($(this).val() === "1") {
 			$("#seniorId").attr("style", "display: block !important;");
+			$("#inputCitizenNumber").attr("required", "required");
 		} else {
 			$("#seniorId").attr("style", "display: none !important;");
+			$("#inputCitizenNumber").removeAttr("required");
 		}
 	});
 
 	$('input[name="ctc"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".ctcinput").removeAttr("disabled");
+			$(".ctcinput").attr("required");
 		} else {
 			$(".ctcinput").attr("disabled", "disabled");
+			$(".ctcinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="sss"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".sssinput").removeAttr("disabled");
+			$(".sssinput").attr("required");
 		} else {
 			$(".sssinput").attr("disabled", "disabled");
+			$(".sssinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="tin"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".tininput").removeAttr("disabled");
+			$(".tininput").attr("required", "required");
 		} else {
 			$(".tininput").attr("disabled", "disabled");
+			$(".tininput").removeAttr("required");
 		}
 	});
 
 	$('input[name="cedula"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".brgyinput").removeAttr("disabled");
+			$(".brgyinput").attr("required", "required");
 		} else {
 			$(".brgyinput").attr("disabled", "disabled");
+			$(".brgyinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="philhealth"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".phinput").removeAttr("disabled");
+			$(".phinput").attr("required", "required");
 		} else {
 			$(".phinput").attr("disabled", "disabled");
+			$(".phinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="nso"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".nsoinput").removeAttr("disabled");
+			$(".nsoinput").attr("required", "required");
 		} else {
 			$(".nsoinput").attr("disabled", "disabled");
+			$(".nsoinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="voters"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".votersinput").removeAttr("disabled");
+			$(".votersinput").attr("required", "required");
 		} else {
 			$(".votersinput").attr("disabled", "disabled");
+			$(".votersinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="passport"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".passportinput").removeAttr("disabled");
+			$(".passportinput").attr("required", "required");
 		} else {
 			$(".passportinput").attr("disabled", "disabled");
+			$(".passportinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="nbi"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".nbiinput").removeAttr("disabled");
+			$(".nbiinput").attr("required", "required");
 		} else {
 			$(".nbiinput").attr("disabled", "disabled");
+			$(".nbiinput").removeAttr("required");
 		}
 	});
 
 	$('input[name="brgyCert"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$("#proof1").removeAttr("disabled");
+			$("#proof1").attr("required", "required");
+			$("#proof2").attr("required", "required");
 			$("#proof2").removeAttr("disabled");
 		} else {
 			$("#proof1").attr("disabled", "disabled");
+			3;
+			$("#proof1").removeAttr("required");
+			$("#proof2").removeAttr("required");
 			$("#proof2").attr("disabled", "disabled");
 		}
 	});
