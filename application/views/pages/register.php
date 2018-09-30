@@ -680,7 +680,7 @@
 					</div>
 				</div>
 										
-				<div class="registrationtab" id="residencytab" data-prev="voterstab" data-next="" data-active="false">
+				<div class="registrationtab" id="residencytab" data-prev="voterstab" data-next="previewtab" data-active="false">
 					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
 					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="brgyCert">With Proof of Billing?</LABEL>
 					<div class="row">
@@ -723,12 +723,422 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="registrationtab" id="previewtab" data-prev="insurancetab" data-next="" data-active="false">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<h3>Preview</h3>
+							<legend>Personal Details</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>LGU ID</strong></label>
+								<p class="text-uppercase">PENDING</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>First Name</strong></label>
+								<p class="text-uppercase" id="first_name_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Middle Name</strong></label>
+								<p class="text-uppercase" id="middle_name_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Last Name</strong></label>
+								<p class="text-uppercase" id="last_name_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Suffix</strong></label>
+								<p class="text-uppercase" id="suffix_name_preview"></p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Civil Status</strong></label>
+								<p class="text-uppercase" id="civil_status_preview"></p>
+								</select>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Date of Birth</strong></label>
+								<p class="text-uppercase" id="birth_day_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Place of Birth</strong></label>
+								<p class="text-uppercase" id="place_of_birth_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Citizenship</strong></label>
+								<p class="text-uppercase" id="citizenship_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Gender</strong></label>
+								<p class="text-uppercase" id="gender_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Blood Type</strong></label>
+								<p class="text-uppercase" id="blood_type_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Height (cm) </strong></label>
+								<p class="text-uppercase" id="height_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Weight (kg)</strong></label>
+								<p class="text-uppercase" id="weight_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Country</strong></label>
+								<p class="text-uppercase" id="homeCountry_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Color of Hair</strong></label>
+								<p class="text-uppercase" id="hairColor_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Color of Eyes</strong></label>
+								<p class="text-uppercase" id="eyesColor_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Other Feature</strong></label>
+								<p class="text-uppercase" id="otherFeature_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Senior Citizen</strong></label>
+								<p class="text-uppercase" id="senior_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="seniorId_preview">
+							<div class="form-group">
+								<label for=""><strong>Senior Citizen Number</strong></label>
+								<p class="text-uppercase" id="seniorCitizenNumber_preview"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>Address Details</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Unit No. / Building</strong></label>
+								<p class="text-uppercase" id="unitNo_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Number / Street</strong></label>
+								<p class="text-uppercase" id="numberStreet_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Subdivision</strong></label>
+								<p class="text-uppercase" id="subdivision_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Barangay</strong></label>
+								<p class="text-uppercase" id="barangay_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Postal Code</strong></label>
+								<p class="text-uppercase" id="postal_code_preview"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>Work Business Details</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Employment Status</strong></label>
+								<p class="text-uppercase" id="employementStatus_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Company Name</strong></label>
+								<p class="text-uppercase" id="companyName_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Position</strong></label>
+								<p class="text-uppercase" id="position_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Country</strong></label>
+								<p class="text-uppercase" id="country_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Region</strong></label>
+								<p class="text-uppercase" id="region_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Province</strong></label>
+								<p class="text-uppercase" id="province_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>City / Municipality</strong></label>
+								<p class="text-uppercase" id="city_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Barangay</strong></label>
+								<p class="text-uppercase" id="companyBarangay_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Floor / Unit No. / Bldg No.</strong></label>
+								<p class="text-uppercase" id="companyUnit_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Street Name</strong></label>
+								<p class="text-uppercase" id="streetName_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Postal Code</strong></label>
+								<p class="text-uppercase" id="companyPostalCode_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Contact Number</strong></label>
+								<p class="text-uppercase" id="companyContact_preview"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>Contact Information Details</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Home Phone Number</strong></label>
+								<p class="text-uppercase" id="homePhoneNumber_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Cellphone Number</strong></label>
+								<p class="text-uppercase" id="cellPhoneNumber_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Email Address</strong></label>
+								<p class="text-uppercase" id="emailAddress_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Contact Person</strong></label>
+								<p class="text-uppercase" id="contactPerson_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Address of Contact Person</strong></label>
+								<p class="text-uppercase" id="contactPersonAddress_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Telephone Number</strong></label>
+								<p class="text-uppercase" id="telephoneNumber_preview"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>Family Profile Details</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Spouse Maiden Name</strong></label>
+								<p class="text-uppercase" id="spouseMaidenName_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Spouse Date of Birth</strong></label>
+								<p class="text-uppercase" id="spouseBday_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Father's Name</strong></label>
+								<p class="text-uppercase" id="fatherName_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Mother's Maiden Name</strong></label>
+								<p class="text-uppercase" id="motherName_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 1</strong></label>
+								<p class="text-uppercase" id="child1_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 2</strong></label>
+								<p class="text-uppercase" id="child2_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 3</strong></label>
+								<p class="text-uppercase" id="child3_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 4</strong></label>
+								<p class="text-uppercase" id="child4_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 5</strong></label>
+								<p class="text-uppercase" id="child5_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 6</strong></label>
+								<p class="text-uppercase" id="child6_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 7</strong></label>
+								<p class="text-uppercase" id="child7_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 8</strong></label>
+								<p class="text-uppercase" id="child8_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 9</strong></label>
+								<p class="text-uppercase" id="child9_preview"></p>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<div class="form-group">
+								<label for=""><strong>Children 10</strong></label>
+								<p class="text-uppercase" id="child10_preview"></p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
+							<legend>Community Tax Certification Details</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ctcShow">
+							<label for=""><strong>Date of Issue</strong></label>
+							<p class="text-uppercase" id="ctcDateIssue_preview"></p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
+							<label for=""><strong>CTC No.</strong></label>
+							<p class="text-uppercase" id="ctcNo_preview"></p>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
+							<label for=""><strong>Place of Issue</strong></label>
+							<p class="text-uppercase" id="placeIssue_preview"></p>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
+							<legend>Community Tax Certification Details</legend>
+						</div>
+					</div>
+				</div>
 				
 			
 				<div id="button">
 					<button type="button" class="btn btn-default prev">Previous</button>
 					<button type="button" class="btn btn-default next" >Next</button>
-                	<button type="submit" class="btn btn-default register">Register</button>
+                	<button type="submit" class="btn btn-default register">Submit</button>
 				</div>
 				
             </form>
