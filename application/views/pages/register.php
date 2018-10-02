@@ -65,11 +65,6 @@
 		margin-left: auto;
 	}
 
-
-	#seniorId {
-		display: none !important;
-	}
-
 	.container {
 		font-family: Calibri;
 		font-size: 18px;
@@ -224,7 +219,7 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Other Feature</label>
-								<input type="number" name="otherFeature" id="inputOtherFeature" class="form-control" value="">
+								<input type="text" name="otherFeature" id="inputOtherFeature" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -245,7 +240,7 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="seniorId">
 							<div class="form-group textRegisterHome">
 								<label for="">Senior Citizen Number</label>
-								<input type="number" name="seniorCitizenNumber" id="inputCitizenNumber" class="form-control" value="">
+								<input type="number" name="seniorCitizenNumber" id="inputCitizenNumber" class="form-control" value="" disabled="disabled">
 							</div>
 						</div>
 					</div>
@@ -682,7 +677,7 @@
 										
 				<div class="registrationtab" id="residencytab" data-prev="voterstab" data-next="previewtab" data-active="false">
 					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
-					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="brgyCert">With Proof of Billing?</LABEL>
+					<!-- <LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="brgyCert">With Proof of Billing?</LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyCertShow">
 							<label for="">Proof of Billing 1</label>
@@ -702,7 +697,7 @@
 								<?php } ?>
 							</select>
 						</div>
-					</div>
+					</div> -->
 					<LABEL class="textHome1">&nbsp;&nbsp;Insurance Coverage To Avail</LABEL>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">

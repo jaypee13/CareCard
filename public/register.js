@@ -168,11 +168,12 @@ $(document).ready(function() {
 
 	$('input[name="senior"]').on("click", function() {
 		if ($(this).val() === "1") {
-			$("#seniorId").attr("style", "display: block !important;");
+			$("#inputCitizenNumber").removeAttr("disabled");
 			$("#inputCitizenNumber").attr("required", "required");
 		} else {
-			$("#seniorId").attr("style", "display: none !important;");
+			$("#inputCitizenNumber").attr("disabled", "disabled");
 			$("#inputCitizenNumber").removeAttr("required");
+			$("#inputCitizenNumber").removeClass("error");
 		}
 	});
 
@@ -183,6 +184,7 @@ $(document).ready(function() {
 		} else {
 			$(".ctcinput").attr("disabled", "disabled");
 			$(".ctcinput").removeAttr("required");
+			$(".ctcinput").removeClass("error");
 		}
 	});
 
@@ -193,6 +195,7 @@ $(document).ready(function() {
 		} else {
 			$(".sssinput").attr("disabled", "disabled");
 			$(".sssinput").removeAttr("required");
+			$(".sssinput").removeClass("error");
 		}
 	});
 
@@ -203,6 +206,7 @@ $(document).ready(function() {
 		} else {
 			$(".tininput").attr("disabled", "disabled");
 			$(".tininput").removeAttr("required");
+			$(".tininput").removeClass("error");
 		}
 	});
 
@@ -213,6 +217,7 @@ $(document).ready(function() {
 		} else {
 			$(".brgyinput").attr("disabled", "disabled");
 			$(".brgyinput").removeAttr("required");
+			$(".brgyinput").removeClass("error");
 		}
 	});
 
@@ -223,6 +228,7 @@ $(document).ready(function() {
 		} else {
 			$(".phinput").attr("disabled", "disabled");
 			$(".phinput").removeAttr("required");
+			$(".phinput").removeClass("error");
 		}
 	});
 
@@ -233,6 +239,7 @@ $(document).ready(function() {
 		} else {
 			$(".nsoinput").attr("disabled", "disabled");
 			$(".nsoinput").removeAttr("required");
+			$(".nsoinput").removeClass("error");
 		}
 	});
 
@@ -243,6 +250,7 @@ $(document).ready(function() {
 		} else {
 			$(".votersinput").attr("disabled", "disabled");
 			$(".votersinput").removeAttr("required");
+			$(".votersinput").removeClass("error");
 		}
 	});
 
@@ -253,6 +261,7 @@ $(document).ready(function() {
 		} else {
 			$(".passportinput").attr("disabled", "disabled");
 			$(".passportinput").removeAttr("required");
+			$(".passportinput").removeClass("error");
 		}
 	});
 
@@ -263,6 +272,7 @@ $(document).ready(function() {
 		} else {
 			$(".nbiinput").attr("disabled", "disabled");
 			$(".nbiinput").removeAttr("required");
+			$(".nbiinput").removeClass("error");
 		}
 	});
 
