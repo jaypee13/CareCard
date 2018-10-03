@@ -1133,7 +1133,7 @@
 				<div id="button">
 					<button type="button" class="btn btn-default prev">Previous</button>
 					<button type="button" class="btn btn-default next" >Next</button>
-                	<button type="submit" class="btn btn-default register">Submit</button>
+                	<button type="button" class="btn btn-default register">Submit</button>
 				</div>
 				
             </form>
