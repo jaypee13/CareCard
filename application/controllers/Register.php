@@ -28,7 +28,7 @@ class Register extends CI_Controller {
 			'dteBirth'	           => '',
 			'strBirthPlace'        => $inputtedData['place_of_birth'],
 			'strCountry'           => 'PH',
-			'strNationality'       => $inputtedData['citizenship'],
+			'strNationality'       => 'FIL',
 			'strCitizenship'       => $inputtedData['citizenship'],
 			'strGender'		       => $inputtedData['gender'],
 			'intHeight'		       => (int) $inputtedData['height'],
@@ -172,7 +172,7 @@ class Register extends CI_Controller {
 
 		$this->db->insert('tblConstituentDocu', $documents);
 
-		redirect('/register/success?lgu='. $ctrlno . '&pwd=', 'refresh');
+		redirect('/register/success?lgu='. $ctrlno);
 	}
 
 	public function success()

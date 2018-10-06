@@ -87,8 +87,10 @@ $(document).ready(function() {
 							if (data == "false") {
 								nextTab(id);
 								$("#alert-exist").hide();
+								// $("#alert").hide();
 							} else {
 								$("#alert-exist").show();
+								// $("#alert").show();
 							}
 						}
 					});
@@ -131,8 +133,10 @@ $(document).ready(function() {
 						if (data == "false") {
 							nextTab(id);
 							$("#alert-exist").hide();
+							// $("#alert").hide();
 						} else {
 							$("#alert-exist").show();
+							// $("#alert").show();
 						}
 					}
 				});

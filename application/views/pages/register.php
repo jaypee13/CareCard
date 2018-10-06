@@ -86,6 +86,9 @@
 				<div class="alert alert-danger" id="alert" style="display: none;">
 					<strong>Information:</strong> Please fill up all the required information.
 				</div>
+				<div class="alert alert-danger" id="alert-exist" style="display: none;">
+					<strong>Information:</strong> Your name and birthday is already existing on our records. If this is wrong, please visit the Care Card Center personally to register.
+				</div>
 
 				<div class="registrationtab" id="personaltab" data-next="addresstab" data-prev=" " data-active="true">
 					<LABEL class="textHome1">&nbsp;&nbsp;PERSONAL DETAILS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
@@ -676,7 +679,7 @@
 				</div>
 										
 				<div class="registrationtab" id="residencytab" data-prev="voterstab" data-next="previewtab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;INSURANCE COVERAGE TO AVAIL<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
 					<!-- <LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="brgyCert">With Proof of Billing?</LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyCertShow">
@@ -698,7 +701,7 @@
 							</select>
 						</div>
 					</div> -->
-					<LABEL class="textHome1">&nbsp;&nbsp;Insurance Coverage To Avail</LABEL>
+					<!-- <LABEL class="textHome1">&nbsp;&nbsp;Insurance Coverage To Avail</LABEL> -->
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="checkbox">
@@ -1102,7 +1105,7 @@
 						</div>
 					</div>
 
-					<div class="row">
+					<!-- <div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
 							<legend>Community Tax Certification Details</legend>
 						</div>
@@ -1126,7 +1129,7 @@
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
 							<legend>Community Tax Certification Details</legend>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				
 			
