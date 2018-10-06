@@ -39,7 +39,6 @@ class Login extends CI_Controller {
         $user = $this->input->post('txtUsrName');
         $pass = $this->input->post('txtUsrPwd');
         // ECHO $pass;
-        // ECHO $this->phpEncrypt($pass);
         // EXIT();
 
         $tmpQuery = "Select id, strUserName, strName, strPass, intLevel
