@@ -13,7 +13,13 @@ class Register extends CI_Controller {
         }
 
 		$inputtedData = $this->setUpperCase($this->input->post());
-		$ctrlno = rand(1, 100000);
+		
+		$tmpQuery = "Select isnull(max(strCtrlNo),0) + 1 as CtrlNo from tblConstituent";
+        $query = $this->db->query($tmpQuery);
+        foreach ($query->result() as $row)
+        {
+           $ctrlno = $row->CtrlNo;
+        }
 
 		// $lgu = $this->db->select('strLGUNo')->order_by('id',"desc")->limit(1)->get('tblConstituent')->row();
 		// $lguId = str_pad($lgu->strLGUNo + 1, 7, '0', STR_PAD_LEFT);
@@ -25,7 +31,7 @@ class Register extends CI_Controller {
 			'strSuffix'	           => $inputtedData['suffix'],
 			'strFullName'          => $inputtedData['first_name'] . ' ' . $inputtedData['last_name'],
 			'strCivilStat'         => $inputtedData['civil_status'],
-			'dteBirth'	           => '',
+			'dteBirth'	           => $inputtedData['birth_day'],
 			'strBirthPlace'        => $inputtedData['place_of_birth'],
 			'strCountry'           => 'PH',
 			'strNationality'       => 'FIL',
@@ -80,7 +86,7 @@ class Register extends CI_Controller {
 			'strStat'			   => 'PEN',
 			'dteAdded'			   => $dteServer,
 			'strUser'			   => 'ONLINE',
-			'strLGUNo'			   => '',
+			// 'strLGUNo'			   => '',
 			'strCtrlNo'			   => $ctrlno
 		);
 

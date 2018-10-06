@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>public\OtherPublic\styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Taytay Care Card</title>   
+    <title>Municipal Care Card</title>   
 
     <style type="text/css">
       { margin: 0; padding: 0; }

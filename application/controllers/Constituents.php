@@ -37,31 +37,32 @@
 				$this->load->view('templates/footerSub');  //other required footer
 				$this->load->view('templates/footer'); //load javascript sources
 			}
-			$data['QueryPersonal'] = $this->constituents_model->get_information($strID, 'Personal');
-			if (empty($data['QueryPersonal'])){
-				//show_404();
-			}
+			else {
+				$data['QueryPersonal'] = $this->constituents_model->get_information($strID, 'Personal');
+				if (empty($data['QueryPersonal'])){
+					//show_404();
+				}
 
-			
-			$data['QueryDocu'] = $this->constituents_model->get_information($strID, 'Documents');
-			if (empty($data['QueryDocu'])){
-				//show_404();
-			}
+				
+				$data['QueryDocu'] = $this->constituents_model->get_information($strID, 'Documents');
+				if (empty($data['QueryDocu'])){
+					//show_404();
+				}
 
-			
-			$data['QueryCorporeal'] = $this->constituents_model->get_information($strID, 'Corporeal');
-			$data['QueryCorporeal'] = $data['QueryCorporeal']->row_array();
-			if (empty($data['QueryCorporeal'])){
-				//show_404();
-			}
-			header("Content-Type: image/jpeg");
-			if (empty($data['QueryOutput']) == FALSE){
-				$data['title'] = "Constituent Information";
-
-				$this->load->view('templates/header'); //header page
-				$this->load->view('constituents/view', $data); //content page
-				$this->load->view('templates/footerSub');  //other required footer
-				$this->load->view('templates/footer'); //load javascript sources
+				
+				$data['QueryCorporeal'] = $this->constituents_model->get_information($strID, 'Corporeal');
+				$data['QueryCorporeal'] = $data['QueryCorporeal']->row_array();
+				if (empty($data['QueryCorporeal'])){
+					//show_404();
+				}
+				if (empty($data['QueryOutput']) == FALSE){
+					header("Content-Type: image/jpeg");
+					$data['title'] = "Constituent Information";
+					$this->load->view('templates/header'); //header page
+					$this->load->view('constituents/view', $data); //content page
+					$this->load->view('templates/footerSub');  //other required footer
+					$this->load->view('templates/footer'); //load javascript sources
+				}
 			}
 		}
 		

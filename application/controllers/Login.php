@@ -87,8 +87,11 @@ class Login extends CI_Controller {
         }
         else{
             //add constituent login here
-            $query = $this->db->query("Select id, strLGUNo, strFullname, strPwd, 99 as intLevel
-                                   from tblConstituent where strLGUNo = '".$user."' and (strPwd = '" . $pass . "' or '". $pass ."' = 'sbgi')");
+            //for easier login, user does not need to input the padded ID number
+            if (is_numeric($user) === FALSE){
+                $query = $this->db->query("Select id, strLGUNo, strFullname, strPwd, 99 as intLevel from tblConstituent where strLGUNo = '".$user."' and (strPwd = '" . $pass . "' or '". $pass ."' = 'sbgi')");}
+            ELSE {
+                $query = $this->db->query("Select id, strLGUNo, strFullname, strPwd, 99 as intLevel from tblConstituent where Cast(strLGUNo as numeric) = ".$user." and (strPwd = '" . $pass . "' or '". $pass ."' = 'sbgi')");}
             foreach ($query->result() as $row)
             {
                $strName = $row->strFullname;

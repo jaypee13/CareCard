@@ -1,4 +1,6 @@
 <style>
+	
+
 	label {
 		margin-bottom: 0px;
 		font-size: 18px;
@@ -78,27 +80,29 @@
 		display: none;
 	}
 </style>
-<br/>
+<!-- <br/> -->
 <div class="container center-div2">
+	<LABEL class="textHome3">ONLINE REGISTRATION<font color='red'>&nbsp;(Kumpletuhin ang Impormasyon)</font></LABEL>
     <div class="card border-primary" >
+
         <div class="card-body" style="margin:0.5px; padding:5px">
             <form action="<?php echo site_url('Register/store') ?>" method="POST" role="form" id="register">
 				<div class="alert alert-danger" id="alert" style="display: none;">
 					<strong>Information:</strong> Please fill up all the required information.
 				</div>
 				<div class="alert alert-danger" id="alert-exist" style="display: none;">
-					<strong>Information:</strong> Your name and birthday is already existing on our records. If this is wrong, please visit the Care Card Center personally to register.
+					<strong>Information:</strong> Your name and birthday is already existing on our records. To verify if you already have a record or there is something wrong, please visit the Municipality Care Card Center personally.
 				</div>
 
 				<div class="registrationtab" id="personaltab" data-next="addresstab" data-prev=" " data-active="true">
-					<LABEL class="textHome1">&nbsp;&nbsp;PERSONAL DETAILS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;PERSONAL DETAILS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 			        
 					
 					<div class="row">
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">First Name *</label>
-								<input type="text" class="form-control" id="first_name" name="first_name" required="required"  data-msg="">
+								<input type="text" class="form-control" id="first_name" name="first_name" required="required"  data-msg="" autofocus>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -137,6 +141,7 @@
 							<div class="form-group textRegisterHome">
 								<label for="">Date of Birth *</label>
 								<input type="date" name="birth_day" id="inputBirth_day" class="form-control" value="" required="required"  data-msg="">
+
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -234,7 +239,7 @@
 										Yes
 									</label>
 									<label>
-										<input type="radio" value="0" name="senior">
+										<input type="radio" value="0" name="senior" checked>
 										No
 									</label>
 								</div>
@@ -242,7 +247,7 @@
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="seniorId">
 							<div class="form-group textRegisterHome">
-								<label for="">Senior Citizen Number</label>
+								<label id="lblSenior" for="">Senior Citizen Number</label>
 								<input type="number" name="seniorCitizenNumber" id="inputCitizenNumber" class="form-control" value="" disabled="disabled">
 							</div>
 						</div>
@@ -250,7 +255,7 @@
 				</div>
 				
 				<div class="registrationtab" id="addresstab" data-prev="personaltab" data-next="worktab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;ADDRESS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;ADDRESS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
@@ -291,7 +296,7 @@
 				</div>
 				
 				<div class="registrationtab" id="worktab" data-prev="addresstab" data-next="contactinformationtab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;WORK / BUSINESS DETAILS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;WORK / BUSINESS DETAILS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
@@ -330,9 +335,16 @@
 							<div class="form-group textRegisterHome">
 								<label for="">Region</label>
 								<select name="region" id="inputRegion" class="form-control">
-									<?php foreach ($region->result() as $key => $value) {  ?>
-										<option value="<?=$value->strRegCode?>"><?=$value->strDescription?></option>
-									<?php } ?>
+									<option value="" selected></option>
+									<?php foreach ($region->result() as $key => $value) {
+
+										if ($value->strRegCode=="13"){
+											echo "<option value=". $value->strRegCode .">" . $value->strDescription . "</option>";
+										}
+										else {
+											echo "<option value=". $value->strRegCode .">" . $value->strDescription . "</option>";
+										}
+									} ?>
 								</select>
 							</div>
 						</div>
@@ -385,7 +397,7 @@
 				</div>
 				
 				<div class="registrationtab" id="contactinformationtab" data-prev="worktab" data-next="familytab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;CONTACT INFORMATION<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;CONTACT INFORMATION&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
@@ -427,7 +439,7 @@
 				</div>
 				
 				<div class="registrationtab" id="familytab" data-prev="contactinformationtab" data-next="ctctab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;FAMILY PROFILE<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;FAMILY PROFILE&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
@@ -438,7 +450,7 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Spouse Date of Birth</label>
-								<input type="date" name="spouseBday" id="inputSpouseBday" class="form-control" value="">
+								<input type="date" name="spouseBday" id="inputSpouseBday" class="form-control" value="" data-msg="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -517,9 +529,9 @@
 				</div>
 				
 				<div class="registrationtab" id="ctctab" data-prev="familytab" data-next="brgytab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 
-					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="ctc">With Community Tax Certificate?</LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" id="chkCTC" name="ctc">With Community Tax Certificate?</LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ctcShow">
 							<label for="">Date of Issue</label>
@@ -577,8 +589,8 @@
 				</div>
 				
 				<div class="registrationtab" id="brgytab" data-prev="ctctab" data-next="voterstab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
-					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="cedula">With Barangay Clearance?</LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" id="chkBrgy" name="cedula">With Barangay Clearance?</LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 cedulaShow">
 							<label for="">Date of Issue</label>
@@ -631,9 +643,9 @@
 					</div>
 				</div>
 
-				<div class="registrationtab" id="voterstab" data-prev="brgytab" data-next="residencytab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
-					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="voters">With Voters ID?</LABEL>
+				<div class="registrationtab" id="voterstab" data-prev="brgytab" data-next="insurancetab" data-active="false">
+					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
+					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" id="chkVoters" name="voters">With Voters ID?</LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label for="">Date of Issue</label>
@@ -678,8 +690,8 @@
 					</div>
 				</div>
 										
-				<div class="registrationtab" id="residencytab" data-prev="voterstab" data-next="previewtab" data-active="false">
-					<LABEL class="textHome1">&nbsp;&nbsp;INSURANCE COVERAGE TO AVAIL<font color='red'>&nbsp;(For Non-Members Only)</font>&nbsp;<a style="font-size:14px;padding: 1px;" href="<?php base_url(); ?>FAQs">(Sino Maaring Kumuha ng Card?)</a></LABEL>
+				<div class="registrationtab" id="insurancetab" data-prev="voterstab" data-next="previewtab" data-active="false">
+					<LABEL class="textHome1">&nbsp;&nbsp;INSURANCE COVERAGE TO AVAIL&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 					<!-- <LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="brgyCert">With Proof of Billing?</LABEL>
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyCertShow">
@@ -706,8 +718,8 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="checkbox">
 								<label for="">
-									<input type="checkbox" name="accidendatalDeath" id="accidendatalDeath">
-									Apply For Accidental Death Dismemberment?
+									<input type="checkbox" name="accidendatalDeath" id="accidendatalDeath" checked disabled>
+									Accidental Death Dismemberment (Default)
 								</label>
 							</div>
 						</div>
@@ -715,7 +727,7 @@
 							<div class="checkbox">
 								<label for="">
 									<input type="checkbox" name="additonalCoverage" id="additonalCoverage">
-									Apply For Additional Insurance Coverage?
+									Additional Insurance Coverage (See List @ the Care Card Center)
 								</label>
 							</div>
 						</div>
@@ -1134,7 +1146,7 @@
 				
 			
 				<div id="button">
-					<button type="button" class="btn btn-default prev">Previous</button>
+					<button type="button" class="btn btn-default prev" style="display: none">Previous</button>
 					<button type="button" class="btn btn-default next" >Next</button>
                 	<button type="button" class="btn btn-default register">Submit</button>
 				</div>

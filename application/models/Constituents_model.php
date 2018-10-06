@@ -5,6 +5,10 @@
 		}
 
 		public function get_constituents($strFullName = FALSE, $strIDNumber = FALSE, $strCoverage = FALSE){
+
+			//IF ERROR OCCURED, MAKE SURE THAT STRLGUNO HAS NO BLANK VALUE. 
+			//ONLY NULL AND NUMERIC VALUE IS ALLOWED
+
 			$tmpQuery= ("select top 500 strLGUNo, strLGUNo as [LGU Number], ISNULL(strFullName,'') AS [Full Name], 
 				   (Select case when isAddtlCov = 1 then 'Add-On' else 'Standard' end from tblConstituentDocu where intConstID = tblConstituent.id) as [Coverage],
 				   ISNULL((Select descrip from PRMList 
@@ -36,7 +40,7 @@
 			}
 			
 			
-			$tmpQuery = $tmpQuery . ' ' . $tmpCondition . ' order by strFullName';
+			$tmpQuery = $tmpQuery . ' ' . $tmpCondition . ' order by id desc';
 			//echo 'NAME: ' . $strFullName . ' ID: ' . $strIDNumber . ' COVERAGE: ' . $strCoverage . ' *** ' . $tmpQuery;
 			//EXIT();
 			$query = $this->db->query($tmpQuery);
