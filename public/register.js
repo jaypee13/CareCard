@@ -510,6 +510,9 @@ function showFamilyDetails() {
 	$("#child8_preview").text($('input[name="child8"]').val());
 	$("#child9_preview").text($('input[name="child9"]').val());
 	$("#child10_preview").text($('input[name="child10"]').val());
+	$("#ctcDateIssue_preview").text($("#inputCtcDateIssue").val());
+	$("#ctcNo_preview").text($("#inputCtcNo").val());
+	$("#ctcPlaceIssue_preview").text($("#inputPlaceIssue").val());
 }
 
 function showTaxDetails() {

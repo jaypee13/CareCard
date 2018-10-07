@@ -546,14 +546,14 @@
 							<label for="">Social Security Number</label>
 							<input type="text" name="ssNumber" id="inputSsNumber" class="form-control sssinput" value="" disabled>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sssShow">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-1277 sssShow">
 							<label for="">Date of Issue</label>
 							<input type="date" name="ssDateIssue" id="inputSsDateIssue" class="form-control sssinput" value="" disabled>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sssShow">
 							<label for="">Place Issue</label>
 							<input type="text" name="placeIssue" id="inputPlaceIssue" class="form-control sssinput" value="" disabled>
-						</div>
+						</div>  
 					</div>
 				
 					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="tin">With TIN?</LABEL>
@@ -1118,13 +1118,203 @@
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
 							<label for=""><strong>Place of Issue</strong></label>
-							<p class="text-uppercase" id="placeIssue_preview"></p>
+							<p class="text-uppercase" id="ctcPlaceIssue_preview"></p>
 						</div>
 					</div>
 
 					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
-							<legend>Community Tax Certification Details</legend>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="sss_preview">
+							<legend>Social Security</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="sssDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
+							<label>
+								<strong>Social Security Number</strong>
+								<p class="text-uppercase" id="sssNo_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
+							<label>
+								<strong>Place of Issue</strong>
+								<p class="text-uppercase" id="sssPlaceIssue_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tin_preview">
+							<legend>TIN</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="tinDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinhow">
+							<label>
+								<strong>TIN</strong>
+								<p class="text-uppercase" id="tin_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinhow">
+							<label>
+								<strong>Place of Issue</strong>
+								<p class="text-uppercase" id="tinPlaceIssue_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="brgy_preview">
+							<legend>Brgy Clearance</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="brgyDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyShow">
+							<label>
+								<strong>Barangay Number</strong>
+								<p class="text-uppercase" id="brgy_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyShow">
+							<label>
+								<strong>Place of Issue</strong>
+								<p class="text-uppercase" id="brgyPlaceIssue_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="ph_preview">
+							<legend>Philhealth</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="phDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
+							<label>
+								<strong>Philhealth Number</strong>
+								<p class="text-uppercase" id="ph_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
+							<label>
+								<strong>Place of Issue</strong>
+								<p class="text-uppercase" id="phPlaceIssue_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="nso_preview">
+							<legend>NSO</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="nsoDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
+							<label>
+								<strong>Registry Number</strong>
+								<p class="text-uppercase" id="nsoRegistryNo_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="voters_preview">
+							<legend>Voters</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="votersDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
+							<label>
+								<strong>ID Number</strong>
+								<p class="text-uppercase" id="votersRegistryNo_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="passport_preview">
+							<legend>Passport</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passportShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="passportDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passportShow">
+							<label>
+								<strong>Passport Number</strong>
+								<p class="text-uppercase" id="passportNo_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passportShow">
+							<label>
+								<strong>Place of Issue</strong>
+								<p class="text-uppercase" id="passportPlaceIssue_preview"></p>
+							</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="nbi_preview">
+							<legend>NBI Clearance</legend>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
+							<label>
+								<strong>Date of Issue</strong>
+								<p class="text-uppercase" id="nbiDateIssue_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
+							<label>
+								<strong>NBI Number</strong>
+								<p class="text-uppercase" id="nbiNo_preview"></p>
+							</label>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
+							<label>
+								<strong>Place of Issue</strong>
+								<p class="text-uppercase" id="nbiPlaceIssue_preview"></p>
+							</label>
 						</div>
 					</div>
 				</div>
