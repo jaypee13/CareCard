@@ -61,6 +61,14 @@ body {
 .textHome2 {
     font-size: 18px;
     font-family: Calibri;
+    
+}
+
+.textHome3 {
+    font-size: 20px;
+    font-family: Calibri;
+    font-weight: bold;
+    display: block;
 }
 
 .textRegisterHome {

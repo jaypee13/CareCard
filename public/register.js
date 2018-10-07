@@ -87,8 +87,10 @@ $(document).ready(function() {
 							if (data == "false") {
 								nextTab(id);
 								$("#alert-exist").hide();
+								// $("#alert").hide();
 							} else {
 								$("#alert-exist").show();
+								// $("#alert").show();
 							}
 						}
 					});
@@ -131,8 +133,10 @@ $(document).ready(function() {
 						if (data == "false") {
 							nextTab(id);
 							$("#alert-exist").hide();
+							// $("#alert").hide();
 						} else {
 							$("#alert-exist").show();
+							// $("#alert").show();
 						}
 					}
 				});
@@ -168,19 +172,23 @@ $(document).ready(function() {
 
 	$('input[name="senior"]').on("click", function() {
 		if ($(this).val() === "1") {
+			document.getElementById("lblSenior").innerHTML = "Senior Citizen Number *";
 			$("#inputCitizenNumber").removeAttr("disabled");
 			$("#inputCitizenNumber").attr("required", "required");
 		} else {
+			document.getElementById("lblSenior").innerHTML = "Senior Citizen Number";
 			$("#inputCitizenNumber").attr("disabled", "disabled");
 			$("#inputCitizenNumber").removeAttr("required");
 			$("#inputCitizenNumber").removeClass("error");
 		}
 	});
 
+
+
 	$('input[name="ctc"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".ctcinput").removeAttr("disabled");
-			$(".ctcinput").attr("required");
+			$(".ctcinput").attr("required", "required");
 		} else {
 			$(".ctcinput").attr("disabled", "disabled");
 			$(".ctcinput").removeAttr("required");
@@ -188,10 +196,12 @@ $(document).ready(function() {
 		}
 	});
 
+
+
 	$('input[name="sss"]').on("change", function() {
 		if ($(this).is(":checked")) {
 			$(".sssinput").removeAttr("disabled");
-			$(".sssinput").attr("required");
+			$(".sssinput").attr("required", "required");
 		} else {
 			$(".sssinput").attr("disabled", "disabled");
 			$(".sssinput").removeAttr("required");
@@ -389,6 +399,34 @@ function nextTab(id) {
 	$("#" + id).attr("data-active", "false");
 	$("#" + $("#" + id).data("next")).show();
 	$("#" + $("#" + id).data("next")).attr("data-active", "true");
+
+	if ($("#" + id).data("next") == "personaltab") {
+		document.getElementById("first_name").focus();
+	}
+	if ($("#" + id).data("next") == "addresstab") {
+		document.getElementById("inputUnitNo").focus();
+	}
+	if ($("#" + id).data("next") == "worktab") {
+		document.getElementById("inputEmployement_status").focus();
+	}
+	if ($("#" + id).data("next") == "contactinformationtab") {
+		document.getElementById("inputHomePhoneNumber").focus();
+	}
+	if ($("#" + id).data("next") == "familytab") {
+		document.getElementById("inputSpouseMaidenName").focus();
+	}
+	if ($("#" + id).data("next") == "ctctab") {
+		document.getElementById("chkCTC").focus();
+	}
+	if ($("#" + id).data("next") == "brgytab") {
+		document.getElementById("chkBrgy").focus();
+	}
+	if ($("#" + id).data("next") == "voterstab") {
+		document.getElementById("chkVoters").focus();
+	}
+	if ($("#" + id).data("next") == "insurancetab") {
+		document.getElementById("additonalCoverage").focus();
+	}
 }
 
 function prevTab(id) {
