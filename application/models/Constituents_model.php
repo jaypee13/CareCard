@@ -10,7 +10,7 @@
 			//ONLY NULL AND NUMERIC VALUE IS ALLOWED
 
 			$tmpQuery= ("select top 500 strLGUNo, strLGUNo as [LGU Number], ISNULL(strFullName,'') AS [Full Name], 
-				   (Select case when isAddtlCov = 1 then 'Add-On' else 'Standard' end from tblConstituentDocu where intConstID = tblConstituent.id) as [Coverage],
+				   (Select top 1 case when isAddtlCov = 1 then 'Add-On' else 'Standard' end from tblConstituentDocu where intConstID = tblConstituent.id) as [Coverage],
 				   ISNULL((Select descrip from PRMList 
 				   		   where parname = 'GENDER' and cde = strGender),'') AS [Gender], 
 			       ISNULL((Select descrip from PRMList 
