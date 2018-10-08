@@ -46,7 +46,7 @@ class Login extends CI_Controller {
         $query = $this->db->query($tmpQuery);
         foreach ($query->result() as $row)
         { $strPass = $row->strPass;
-            print_r($strPass);
+            //print_r($strPass);
         }
 
         $tmpPassword = $this->phpEncrypt($pass);
