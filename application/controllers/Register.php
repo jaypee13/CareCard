@@ -98,7 +98,7 @@ class Register extends CI_Controller {
 			$documents['isCTC'] = (int) $inputtedData['ctc'];
 			$documents['strCTC'] = $inputtedData['ctcNo'];
 			$documents['dteCTCIssue'] = $inputtedData['ctcDateIssue'];
-			$documents['dteCTCExpiry'] = $inputtedData['expCtcDate'];
+			// $documents['dteCTCExpiry'] = $inputtedData['expCtcDate'];
 			$documents['strCTCPlaceIssue'] = $inputtedData['placeIssue'];
 		}
 
@@ -106,53 +106,53 @@ class Register extends CI_Controller {
 			$documents['isSS'] = (int) $inputtedData['sss'];
 			$documents['strSSType'] = $inputtedData['ssType'];
 			$documents['strSS'] = $inputtedData['ssNumber'];
-			$documents['dteSSIssue'] = $inputtedData['ssDateIssue'];
-			$documents['dteSSExpiry'] = $inputtedData['ssExpDate'];
+			// $documents['dteSSIssue'] = $inputtedData['ssDateIssue'];
+			// $documents['dteSSExpiry'] = $inputtedData['ssExpDate'];
 		}
 
 		if (isset($inputtedData['tin'])) {
 			$documents['isTIN'] = (int) $inputtedData['tin'];
 			$documents['strTIN'] = $inputtedData['tinId'];
-			$documents['dteTINIssue'] = $inputtedData['tinDateIssue'];
-			$documents['dteTINExpiry'] = $inputtedData['tinExpDate'];
-			$documents['strTINPlaceIssue'] = $inputtedData['tinPleaceIssue'];
+			// $documents['dteTINIssue'] = $inputtedData['tinDateIssue'];
+			// $documents['dteTINExpiry'] = $inputtedData['tinExpDate'];
+			// $documents['strTINPlaceIssue'] = $inputtedData['tinPleaceIssue'];
 		}
 		
 		if (isset($inputtedData['cedula'])) {
 			$documents['isBrgy'] = (int) $inputtedData['cedula'];
 			$documents['strBrgy'] = $inputtedData['cedulaNumber'];
 			$documents['dteBrgyIssue'] = $inputtedData['cedulaDateIssue'];
-			$documents['dteBrgyExpiry'] = $inputtedData['cedulaExpDate'];
+			// $documents['dteBrgyExpiry'] = $inputtedData['cedulaExpDate'];
 			$documents['strBrgyPlaceIssue'] = $inputtedData['cedulaPlaceIssue'];
 		}
 
 		if (isset($inputtedData['philhealth'])) {
 			$documents['isPH'] = (int) $inputtedData['philhealth'];
 			$documents['strPH'] = $inputtedData['philNumber'];
-			$documents['dtePHIssue'] = $inputtedData['philDateIssue'];
-			$documents['dtePHExpiry'] = $inputtedData['philExpDate'];
-			$documents['strPHPlaceIssue'] = $inputtedData['philPlaceIssue'];
+			// $documents['dtePHIssue'] = $inputtedData['philDateIssue'];
+			// $documents['dtePHExpiry'] = $inputtedData['philExpDate'];
+			// $documents['strPHPlaceIssue'] = $inputtedData['philPlaceIssue'];
 		}
 		
 		if (isset($inputtedData['nso'])) {
 			$documents['isNSO'] = (int) $inputtedData['nso'];
-			$documents['dteNSOIssue'] = $inputtedData['nsoDateIssue'];
-			$documents['dteNSOExpiry'] = $inputtedData['nsoExpDate'];
-			$documents['strNSOPlaceIssue'] = $inputtedData['nsoPlaceIssue'];
+			// $documents['dteNSOIssue'] = $inputtedData['nsoDateIssue'];
+			// $documents['dteNSOExpiry'] = $inputtedData['nsoExpDate'];
+			// $documents['strNSOPlaceIssue'] = $inputtedData['nsoPlaceIssue'];
 			$documents['strNSO'] = $inputtedData['nsoNumber'];
 		}
 
 		if (isset($inputtedData['voters'])) {
 			$documents['isVoters'] = $inputtedData['voters'];
 			$documents['strVotersID'] = $inputtedData['voterNumber'];
-			$documents['dteVoterIssue'] = $inputtedData['voterDateIssue'];
+			// $documents['dteVoterIssue'] = $inputtedData['voterDateIssue'];
 		}
 
 		if (isset($inputtedData['passport'])) {
 			$documents['isPassport'] = $inputtedData['passport'];
 			$documents['strPassNo'] = $inputtedData['passportNumber'];
 			$documents['dtePassIssue'] = $inputtedData['passportDateIssue'];
-			$documents['dtePassExpiry'] = $inputtedData['passportExpDate'];
+			// $documents['dtePassExpiry'] = $inputtedData['passportExpDate'];
 			$documents['strPassPlaceIssue'] = $inputtedData['passportPlaceIssue'];
 		}
 
@@ -160,8 +160,8 @@ class Register extends CI_Controller {
 			$documents['isNBI'] = $inputtedData['nbi'];
 			$documents['strNBI'] = $inputtedData['nbiNumber'];
 			$documents['dteNBIIssue'] = $inputtedData['nbiDateIssue'];
-			$documents['dteNBIExpiry'] = $inputtedData['nbiExpDate'];
-			$documents['strNBIPlaceIssue'] = $inputtedData['nbiPlaceIssue'];
+			// $documents['dteNBIExpiry'] = $inputtedData['nbiExpDate'];
+			// $documents['strNBIPlaceIssue'] = $inputtedData['nbiPlaceIssue'];
 		}
 
 		if (isset($inputtedData['brgyCert'])) {
@@ -177,7 +177,8 @@ class Register extends CI_Controller {
 		$documents['intConstID'] = $constituenId;
 
 		$this->db->insert('tblConstituentDocu', $documents);
-
+		
+		$ctrlno = str_pad($ctrlno, 7, '0', STR_PAD_LEFT);
 		redirect('/register/success?lgu='. $ctrlno);
 	}
 
@@ -187,7 +188,7 @@ class Register extends CI_Controller {
 		$this->load->view('pages/registerSuccess');
 		$this->load->view('templates/footerSub');  //other required footer
 		$this->load->view('templates/footer'); //load javascript sources
-		$this->session->unset_userdata('user');  //clear user session
+		// $this->session->unset_userdata('user');  //clear user session
 	}
 
 	/**

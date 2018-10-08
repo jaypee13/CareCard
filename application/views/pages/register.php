@@ -561,30 +561,30 @@
 							<label for="">Social Security Number</label>
 							<input type="text" name="ssNumber" id="inputSsNumber" class="form-control sssinput" value="" disabled>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-1277 sssShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-1277 sssShow">
 							<label for="">Date of Issue</label>
 							<input type="date" name="ssDateIssue" id="inputSsDateIssue" class="form-control sssinput" value="" disabled>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sssShow">
 							<label for="">Place Issue</label>
 							<input type="text" name="placeIssue" id="inputPlaceIssue" class="form-control sssinput" value="" disabled>
-						</div>  
+						</div>   -->
 					</div>
 				
 					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="tin">With TIN?</LABEL>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinShow">
 							<label for="">Date of Issue</label>
 							<input type="date" name="tinDateIssue" id="inputTinDateIssue" class="form-control tininput" value="" disabled>
-						</div>
+						</div> -->
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tinShow">
 							<label for="">TIN</label>
 							<input type="text" name="tinId" id="inputTinId" class="form-control tininput" value="" disabled>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tinShow">
+						<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tinShow">
 							<label for="">Place of Issue</label>
 							<input type="text" name="tinPleaceIssue" id="inputTinPleaceIssue" class="form-control tininput" value="" disabled>
-						</div>
+						</div> -->
 					</div>
 				</div>
 				
@@ -608,26 +608,26 @@
 				
 					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="philhealth">With Philhealth?</LABEL>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 philhealthShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 philhealthShow">
 							<label for="">Date of Issue</label>
 							<input type="date" name="philDateIssue" id="inputPhilDateIssue" class="form-control phinput" value="" disabled>
-						</div>
+						</div> -->
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 philhealthShow">
 							<label for="">Philhealth Number</label>
 							<input type="text" name="philNumber" id="inputPhilNumber" class="form-control phinput" value="" disabled>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 philhealthShow">
+						<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 philhealthShow">
 							<label for="">Place Issue</label>
 							<input type="text" name="philPlaceIssue" id="inputPhilPlaceIssue" class="form-control phinput" value="" disabled>
-						</div>
+						</div> -->
 					</div>
 				
 					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="nso">With NSO Birth Certificate?</LABEL>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
 							<label for="">Date of Issue</label>
 							<input type="date" name="nsoDateIssue" id="inputnsoDateIssue" class="form-control nsoinput" value="" disabled>
-						</div>
+						</div> -->
 						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
 							<label for="">Expiration Date</label>
 							<input type="text" name="nsoExpDate" id="inputnsoExpDate" class="form-control nsoinput" value=""  disabled>
@@ -647,10 +647,10 @@
 					<LABEL class="textHome1">&nbsp;&nbsp;LEGAL AND GOVERNMENT DOCUMENTS&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
 					<LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" id="chkVoters" name="voters">With Voters ID?</LABEL>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label for="">Date of Issue</label>
 							<input type="date" name="voterDateIssue" id="inputvoterDateIssue" class="form-control votersinput" value="" disabled>
-						</div>
+						</div> -->
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label for="">ID Number</label>
 							<input type="text" name="voterNumber" id="inputvoterNumber" class="form-control votersinput" value="" disabled>
@@ -683,10 +683,10 @@
 							<label for="">NBI Number</label>
 							<input type="text" name="nbiNumber" id="inputnbiNumber" class="form-control nbiinput" value="" disabled>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nbiShow">
+						<!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nbiShow">
 							<label for="">Place Issue</label>
 							<input type="text" name="nbiPlaceIssue" id="inputnbiPlaceIssue" class="form-control nbiinput" value="" disabled>
-						</div>
+						</div> -->
 					</div>
 				</div>
 										
@@ -1117,7 +1117,7 @@
 						</div>
 					</div>
 
-					<!-- <div class="row">
+					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
 							<legend>Community Tax Certification Details</legend>
 						</div>
@@ -1143,24 +1143,24 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
 							<label>
 								<strong>Date of Issue</strong>
 								<p class="text-uppercase" id="sssDateIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
 							<label>
 								<strong>Social Security Number</strong>
 								<p class="text-uppercase" id="sssNo_preview"></p>
 							</label>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
 							<label>
 								<strong>Place of Issue</strong>
 								<p class="text-uppercase" id="sssPlaceIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="row">
@@ -1169,24 +1169,24 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinShow">
 							<label>
 								<strong>Date of Issue</strong>
 								<p class="text-uppercase" id="tinDateIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinhow">
 							<label>
 								<strong>TIN</strong>
-								<p class="text-uppercase" id="tin_preview"></p>
+								<p class="text-uppercase" id="tinId_preview"></p>
 							</label>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinhow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinhow">
 							<label>
 								<strong>Place of Issue</strong>
 								<p class="text-uppercase" id="tinPlaceIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="row">
@@ -1221,24 +1221,24 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
 							<label>
 								<strong>Date of Issue</strong>
 								<p class="text-uppercase" id="phDateIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
 							<label>
 								<strong>Philhealth Number</strong>
 								<p class="text-uppercase" id="ph_preview"></p>
 							</label>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
 							<label>
 								<strong>Place of Issue</strong>
 								<p class="text-uppercase" id="phPlaceIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 					</div>
 
 					<div class="row">
@@ -1247,12 +1247,12 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
 							<label>
 								<strong>Date of Issue</strong>
 								<p class="text-uppercase" id="nsoDateIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
 							<label>
 								<strong>Registry Number</strong>
@@ -1267,12 +1267,12 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label>
 								<strong>Date of Issue</strong>
 								<p class="text-uppercase" id="votersDateIssue_preview"></p>
 							</label>
-						</div>
+						</div> -->
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label>
 								<strong>ID Number</strong>
@@ -1325,13 +1325,13 @@
 								<p class="text-uppercase" id="nbiNo_preview"></p>
 							</label>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
+						<!-- <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
 							<label>
 								<strong>Place of Issue</strong>
 								<p class="text-uppercase" id="nbiPlaceIssue_preview"></p>
 							</label>
-						</div>
-					</div> -->
+						</div> -->
+					</div>
 				</div>
 				
 			
