@@ -4,6 +4,7 @@ $(document).ready(function() {
 	});
 
 	setLastDate();
+	hideDetails();
 
 	getProvince();
 
@@ -63,7 +64,6 @@ $(document).ready(function() {
 				var id = $('div.registrationtab[data-active="true"]').attr("id");
 
 				if ($("#" + $("#" + id).data("next")).data("next") === "") {
-					showUserDetails();
 					$("button.next").hide();
 					$("button.register").show();
 				}
@@ -109,7 +109,6 @@ $(document).ready(function() {
 			var id = $('div.registrationtab[data-active="true"]').attr("id");
 
 			if ($("#" + $("#" + id).data("next")).data("next") === "") {
-				showUserDetails();
 				$("button.next").hide();
 				$("button.register").show();
 			}
@@ -172,7 +171,8 @@ $(document).ready(function() {
 
 	$('input[name="senior"]').on("click", function() {
 		if ($(this).val() === "1") {
-			document.getElementById("lblSenior").innerHTML = "Senior Citizen Number *";
+			document.getElementById("lblSenior").innerHTML =
+				"Senior Citizen Number *";
 			$("#inputCitizenNumber").removeAttr("disabled");
 			$("#inputCitizenNumber").attr("required", "required");
 		} else {
@@ -182,8 +182,6 @@ $(document).ready(function() {
 			$("#inputCitizenNumber").removeClass("error");
 		}
 	});
-
-
 
 	$('input[name="ctc"]').on("change", function() {
 		if ($(this).is(":checked")) {
@@ -195,8 +193,6 @@ $(document).ready(function() {
 			$(".ctcinput").removeClass("error");
 		}
 	});
-
-
 
 	$('input[name="sss"]').on("change", function() {
 		if ($(this).is(":checked")) {
@@ -299,6 +295,10 @@ $(document).ready(function() {
 			$("#proof2").removeAttr("required");
 			$("#proof2").attr("disabled", "disabled");
 		}
+	});
+
+	$("input").on("change click paste keyup", function() {
+		showUserDetails();
 	});
 });
 
@@ -451,6 +451,14 @@ function showUserDetails() {
 	showContactDetails();
 	showFamilyDetails();
 	showTaxDetails();
+	showSssDetails();
+	showTinDetails();
+	showBrgyClearanceDetails();
+	showPhDetails();
+	showNSODetails();
+	showVotersDetails();
+	showPassportDetails();
+	showNbiDetails();
 }
 
 function showPersonalDetails() {
@@ -548,18 +556,105 @@ function showFamilyDetails() {
 	$("#child8_preview").text($('input[name="child8"]').val());
 	$("#child9_preview").text($('input[name="child9"]').val());
 	$("#child10_preview").text($('input[name="child10"]').val());
-	$("#ctcDateIssue_preview").text($("#inputCtcDateIssue").val());
-	$("#ctcNo_preview").text($("#inputCtcNo").val());
-	$("#ctcPlaceIssue_preview").text($("#inputPlaceIssue").val());
 }
 
 function showTaxDetails() {
-	if ($('input[name="ctc"]').val() == "0") {
-		$("#stax_preview").hide();
+	if ($('input[name="ctc"]').is(":checked") === false) {
+		$("#tax_preview").hide();
 	} else {
 		$("#tax_preview").show();
 		$("#ctcDateIssue_preview").text($('input[name="ctcDateIssue"]').val());
 		$("#ctcNo_preview").text($('input[name="ctcNo"]').val());
-		$("#placeIssue_preview").text($('input[name="placeIssue"]').val());
+		$("#ctcPlaceIssue_preview").text($("#inputCtcPlaceIssue").val());
 	}
+}
+
+function showSssDetails() {
+	if ($('input[name="sss"]').is(":checked") === false) {
+		$("#sss_preview").hide();
+	} else {
+		$("#sss_preview").show();
+		$("#sssType_preview").text($("#inputssType").val());
+		$("#sssNo_preview").text($("#inputSsNumber").val());
+	}
+}
+
+function showTinDetails() {
+	if ($('input[name="tin"]').is(":checked") === false) {
+		$("#tin_preview").hide();
+	} else {
+		$("#tin_preview").show();
+		$("#tinId_preview").text($("#inputTinId").val());
+	}
+}
+
+function showBrgyClearanceDetails() {
+	if ($('input[name="cedula"]').is(":checked") === false) {
+		$("#brgy_preview").hide();
+	} else {
+		$("#brgy_preview").show();
+		$("#brgyDateIssue_preview").text($("#inputCedulaDateIssue").val());
+		$("#brgyNo_preview").text($("#inputCedulaNumber").va());
+		$("#brgyPlaceIssue_preview").text($("#inputCedulaPlaceIssue").val());
+	}
+}
+
+function showPhDetails() {
+	if ($('input[name="philhealth"]').is(":checked") === false) {
+		$("#ph_preview").hide();
+	} else {
+		$("#ph_preview").show();
+		$("#ph_preview").text($("#inputPhilNumber").val());
+	}
+}
+
+function showNSODetails() {
+	if ($('input[name="nso"]').is(":cheched") === false) {
+		$("#nso_preview").hide();
+	} else {
+		$("#nso_preview").show();
+		$("#nsoRegistryNo_preview").text($("#inputnsoNumber").val());
+	}
+}
+
+function showVotersDetails() {
+	if ($('input[name="voters"]').is(":checked") === false) {
+		$("#voters_preview").hide();
+	} else {
+		$("#voters_preview").show();
+		$("#votersRegistryNo_preview").text($("#inputvoterNumber").val());
+	}
+}
+
+function showPassportDetails() {
+	if ($('input[name="passport"]').is(":checked") === false) {
+		$("#passport_preview").hide();
+	} else {
+		$("#passport_preview").show();
+		$("#passportDateIssue_preview").text($("#inputpassportDateIssue").val());
+		$("#passportNo_preview").text($("#inputpassportNumber").val());
+		$("#passportPlaceIssue_preview").text($("#inputpassportPlaceIssue").val());
+	}
+}
+
+function showNbiDetails() {
+	if ($('input[name="nbi"]').is(":checked") === false) {
+		$("#nbi_preview").hide();
+	} else {
+		$("#nbi_preview").show();
+		$("#nbiNo_preview").text($("#inputnbiNumber").val());
+	}
+}
+
+function hideDetails() {
+	$("#tax_preview").hide();
+	$("#nbi_preview").hide();
+	$("#passport_preview").hide();
+	$("#voters_preview").hide();
+	$("#nso_preview").hide();
+	$("#ph_preview").hide();
+	$("#brgy_preview").hide();
+	$("#tin_preview").hide();
+	$("#tax_preview").hide();
+	$("#sss_preview").hide();
 }
