@@ -17,7 +17,7 @@
 			       		   where parname = 'CIVILSTAT' and cde = strCivilStat),'') AS [Civil], 
 				   CONVERT(VARCHAR(10), dteBirth, 101) AS [Birth], replace(replace(replace(isNull(strUnitBldg, '') + ' ' + isNull(strStreet, '') + ' ' + isNull(strSubdv, '') + ' ' + isNull(strBarangay, '') + ' ' + isNull(strPostal, ''),' ','<>'),'><',''),'<>',' ') as [Complete Address], 
 				   case when ISNULL(blSenior,0) = 0 then 'NO' ELSE 'YES' end AS [Senior?]
-				from tblConstituent");
+				from tblConstituent where strLGUNo is not Null");
 
 			$tmpCondition = "";
 			if (trim($strFullName) === ""){}

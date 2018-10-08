@@ -40,7 +40,15 @@
 			    <p class="card-text"><?php echo ucwords(strtolower($QueryOutput['strAddress'])); ?></p>
 		  	</div>
 		  	<div class="card-body" style="padding:6px;">
-        		<img id="myImgBG" alt="<?php echo $QueryOutput['strFullName']; ?><br/>*** Signature ***" style = "height: 100%; width: 100%; display: block;" border=1 src="data:image/jpeg;base64,<?php echo base64_encode($QueryOutput["blbPhoto"]); ?>" alt="Card image">
+		  		<?php
+		  		if ($QueryOutput["blbPhoto"] == ""){
+
+		  		}
+		  		else{
+		  			echo "<img id='myImgBG' alt='" . $QueryOutput['strFullName'] . "<br/>' style = 'height: 100%; width: 100%; display: block;' border=1 src='data:image/jpeg;base64," . base64_encode($QueryOutput["blbPhoto"]) . "' alt='Card image'>";
+		  		}
+		  		?>
+        		<!-- <img id="myImgBG" alt="<?php echo $QueryOutput['strFullName']; ?><br/>*** Signature ***" style = "height: 100%; width: 100%; display: block;" border=1 src="data:image/jpeg;base64,<?php echo base64_encode($QueryOutput["blbPhoto"]); ?>" alt="Card image"> -->
     		</div>
 		</div>
 
@@ -151,7 +159,15 @@
 				*** Signature ***</li>
 				<li class="list-group-item" style="margin:0.1; padding:1px;background-color:white;text-align: center; vertical-align: middle; display: flex; justify-content: center;">
 					<div width="100%" style="display: flex; justify-content: center;">
-						<img id="myImgBG2" alt="<?php echo $QueryOutput['strFullName']; ?><br/>*** Signature ***" style = "height: 100%; width: 100%; display: block;" border=1 src="data:image/jpeg;base64,<?php echo base64_encode($QueryCorporeal['blbSignature1Image']); ?>" alt="Signature image">
+					<?php
+			  		if ($QueryOutput["blbPhoto"] == ""){
+
+			  		}
+			  		else{
+			  			echo "<img id='myImgBG2' alt='" . $QueryOutput['strFullName'] . "<br/>*** Signature ***' style = 'height: 100%; width: 100%; display: block;' border=1 src='data:image/jpeg;base64," . base64_encode($QueryCorporeal["blbSignature1Image"]) . "' alt='Signature image'>";
+			  		}
+			  		?>
+						<!-- <img id="myImgBG2" alt="<?php echo $QueryOutput['strFullName']; ?><br/>*** Signature ***" style = "height: 100%; width: 100%; display: block;" border=1 src="data:image/jpeg;base64,<?php echo base64_encode($QueryCorporeal['blbSignature1Image']); ?>" alt="Signature image"> -->
 					</div>
 				</li>
 				<li class="list-group-item" style="min-height:32px; margin:0.1; padding:2px;background-color:#F0E68C;text-align: center; vertical-align: middle;">

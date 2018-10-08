@@ -34,7 +34,7 @@
   <div class="column" style="width: 320px; height: 400px;">
     <div class="panel-transparent left">
 		<div class="card border-secondary mb-2" style="width: 300px">
-			<div class="card-header text2">Taytay Care Card Center</div>
+			<div class="card-header text2">Care Card Center</div>
 			<div class="card-body">
 			<h4 class="card-title">Reginald Navales</h4>
 			<p class="card-text">Contact Me: (+63)9503271132<br/>
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="card border-secondary mb-2" style="width: 300px">
-			<div class="card-header text2">Taytay Care Card Center</div>
+			<div class="card-header text2">Care Card Center</div>
 			<div class="card-body">
 			<h4 class="card-title">Joseph Araracap</h4>
 			<p class="card-text">Contact Me: (+63)9256634578<br/>
@@ -53,7 +53,7 @@
   </div>
   <div class="column" style="width: 320px; height: 400px;">
     <div class="card border-secondary mb-2" style="width: 300px">
-			<div class="card-header text2">Taytay Care Card Center</div>
+			<div class="card-header text2">Care Card Center</div>
 			<div class="card-body">
 			<h4 class="card-title">Alvin Andres</h4>
 			<p class="card-text">Contact Me: (+63)912345698<br/>
