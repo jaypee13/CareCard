@@ -484,7 +484,10 @@ function showPersonalDetails() {
 	$("#otherFeature_preview").text(
 		$("#inputOtherFeature option:selected").text()
 	);
-	if ($('input[name="senior"]').val() == "0") {
+
+	console.log($('input[name="senior"]').val());
+
+	if ($('input[name="senior"]:checked').val() == "0") {
 		$("#senior_preview").text("No");
 		$("#seniorCitizenNumber_preview").hide();
 	} else {
@@ -594,22 +597,22 @@ function showBrgyClearanceDetails() {
 	} else {
 		$("#brgy_preview").show();
 		$("#brgyDateIssue_preview").text($("#inputCedulaDateIssue").val());
-		$("#brgyNo_preview").text($("#inputCedulaNumber").va());
+		$("#brgyNo_preview").text($("#inputCedulaNumber").val());
 		$("#brgyPlaceIssue_preview").text($("#inputCedulaPlaceIssue").val());
 	}
 }
 
 function showPhDetails() {
 	if ($('input[name="philhealth"]').is(":checked") === false) {
-		$("#ph_preview").hide();
+		$("#phDIv_preview").hide();
 	} else {
-		$("#ph_preview").show();
+		$("#phDIv_preview").show();
 		$("#ph_preview").text($("#inputPhilNumber").val());
 	}
 }
 
 function showNSODetails() {
-	if ($('input[name="nso"]').is(":cheched") === false) {
+	if ($('input[name="nso"]').is(":checked") === false) {
 		$("#nso_preview").hide();
 	} else {
 		$("#nso_preview").show();
@@ -642,6 +645,7 @@ function showNbiDetails() {
 		$("#nbi_preview").hide();
 	} else {
 		$("#nbi_preview").show();
+		$("#nbiDateIssue_preview").text($("#inputnbiDateIssue").val());
 		$("#nbiNo_preview").text($("#inputnbiNumber").val());
 	}
 }
@@ -652,9 +656,8 @@ function hideDetails() {
 	$("#passport_preview").hide();
 	$("#voters_preview").hide();
 	$("#nso_preview").hide();
-	$("#ph_preview").hide();
+	$("#phDIv_preview").hide();
 	$("#brgy_preview").hide();
 	$("#tin_preview").hide();
-	$("#tax_preview").hide();
 	$("#sss_preview").hide();
 }

@@ -1073,26 +1073,26 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tax_preview">
+					<div class="row" id="tax_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>Community Tax Certification Details</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ctcShow">
 							<label for=""><strong>Date of Issue</strong></label>
 							<p class="text-uppercase" id="ctcDateIssue_preview"></p>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ctcShow">
 							<label for=""><strong>CTC No.</strong></label>
 							<p class="text-uppercase" id="ctcNo_preview"></p>
 						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ctcShow">
 							<label for=""><strong>Place of Issue</strong></label>
 							<p class="text-uppercase" id="ctcPlaceIssue_preview"></p>
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="sss_preview">
+					<div class="row" id="sss_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>Social Security</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ssShow">
@@ -1109,8 +1109,8 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tin_preview">
+					<div class="row" id="tin_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>TIN</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 tinhow">
@@ -1121,8 +1121,8 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="brgy_preview">
+					<div class="row"  id="brgy_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>Brgy Clearance</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyShow">
@@ -1145,8 +1145,8 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="ph_preview">
+					<div class="row"  id="phDIv_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>Philhealth</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 phShow">
@@ -1157,8 +1157,8 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="nso_preview">
+					<div class="row" id="nso_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>NSO</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nsoShow">
@@ -1169,12 +1169,10 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="voters_preview">
+					<div class="row" id="voters_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>Voters</legend>
 						</div>
-					</div>
-					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label>
 								<strong>ID Number</strong>
@@ -1183,8 +1181,8 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="passport_preview">
+					<div class="row" id="passport_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>Passport</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passportShow">
@@ -1207,8 +1205,8 @@
 						</div>
 					</div>
 
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="nbi_preview">
+					<div class="row" id="nbi_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 							<legend>NBI Clearance</legend>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
