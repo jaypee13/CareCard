@@ -102,19 +102,19 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">First Name *</label>
-								<input type="text" class="form-control" id="first_name" name="first_name" value="Sample" required="required"  data-msg="" autofocus>
+								<input type="text" class="form-control" id="first_name" name="first_name" value="" required="required"  data-msg="" autofocus>
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Middle Name *</label>
-								<input type="text" class="form-control" id="middle_name" name="middle_name" value="Sample" required="required">
+								<input type="text" class="form-control" id="middle_name" name="middle_name" value="" required="required">
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Last Name *</label>
-								<input type="text" class="form-control" id="last_name" name="last_name" value="Sample" required="required"  data-msg="">
+								<input type="text" class="form-control" id="last_name" name="last_name" value="" required="required"  data-msg="">
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -132,7 +132,7 @@
 								<select name="civil_status" id="inputCivil_status" class="form-control" required="required">
 									<option value=""></option>
 									<?php foreach ($civilStatus->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -140,14 +140,14 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Date of Birth *</label>
-								<input type="date" name="birth_day" id="inputBirth_day" value="2018-05-23" class="form-control" required="required"  data-msg="">
+								<input type="date" name="birth_day" id="inputBirth_day" value="" class="form-control" required="required"  data-msg="">
 
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Place of Birth *</label>
-								<input type="text" name="place_of_birth" id="inputPlace_of_birth" value="Sample" class="form-control" value="" required="required">
+								<input type="text" name="place_of_birth" id="inputPlace_of_birth" value="" class="form-control" value="" required="required">
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -155,7 +155,11 @@
 								<label for="">Citizenship *</label>
 								<select name="citizenship" id="inputCitizenship" class="form-control" required="required">
 									<?php foreach ($citizenship->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<?php If ($value->descrip=="FILIPINO") {  ?>
+											<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<?php } ELSE { ?>
+											<option value="<?=$value->cde?>"><?=$value->descrip?></option>
+										<?php } ?>
 									<?php } ?>
 								</select>
 							</div>
@@ -166,7 +170,7 @@
 								<select name="gender" id="inputGender" class="form-control" required="required">
 									<option value=""></option>
 									<?php foreach ($gender->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -177,7 +181,7 @@
 								<select name="blood_type" id="inputBloodType" class="form-control">
 									<option value=""></option>
 									<?php foreach ($blood_type->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -185,13 +189,13 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Height (cm) *</label>
-								<input type="number" name="height" id="inputHeight" class="form-control" value="100" required="required"  data-msg="">
+								<input type="number" name="height" id="inputHeight" class="form-control" value="" required="required"  data-msg="">
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Weight (kg) *</label>
-								<input type="number" name="weight" id="inputWeight" class="form-control" value="100" required="required"  data-msg="">
+								<input type="number" name="weight" id="inputWeight" class="form-control" value="" required="required"  data-msg="">
 							</div>
 						</div>
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -199,7 +203,12 @@
 								<label for="">Country *</label>
 								<select name="homeCountry" id="inputPersonalCountry" class="form-control" required="required">
 									<?php foreach ($country->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<?php if ($value->descrip=="PHILIPPINES"){ ?>
+											<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<?php } else{ ?>
+											<option value="<?=$value->cde?>"><?=$value->descrip?></option>
+										<?php } ?>
+										
 									<?php } ?>
 								</select>
 							</div>
@@ -208,6 +217,7 @@
 							<div class="form-group textRegisterHome">
 								<label for="">Color of Hair</label>
 								<select name="hairColor" id="inputHairColor" class="form-control">
+									<option value="" SELECTED></option>
 									<?php foreach ($hair_color->result() as $key => $value) {  ?>
 										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
@@ -218,6 +228,7 @@
 							<div class="form-group textRegisterHome">
 								<label for="">Color of Eyes</label>
 								<select name="eyesColor" id="inputEyesColor" class="form-control">
+									<option value="" SELECTED></option>
 									<?php foreach ($eyes_color->result() as $key => $value) {  ?>
 										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
@@ -227,7 +238,7 @@
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Other Feature</label>
-								<input type="text" name="otherFeature" id="inputOtherFeature" class="form-control" value="SAMPLE">
+								<input type="text" name="otherFeature" id="inputOtherFeature" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -248,7 +259,7 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="seniorId">
 							<div class="form-group textRegisterHome">
 								<label id="lblSenior" for="">Senior Citizen Number</label>
-								<input type="number" name="seniorCitizenNumber" id="inputCitizenNumber" value="100" class="form-control" value="" disabled="disabled">
+								<input type="number" name="seniorCitizenNumber" id="inputCitizenNumber" class="form-control" value="" disabled="disabled">
 							</div>
 						</div>
 					</div>
@@ -260,28 +271,28 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Unit No. / Building</label>
-								<input type="text" name="unitNo" id="inputUnitNo" value="Sample" class="form-control" rows="3">
+								<input type="text" name="unitNo" id="inputUnitNo" value="" class="form-control" rows="3">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Number / Street *</label>
-								<input name="numberStreet" id="inputNumberStreet" value="Sample" class="form-control" rows="3" required="required"  data-msg="">
+								<input name="numberStreet" id="inputNumberStreet" value="" class="form-control" rows="3" required="required"  data-msg="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Subdivision</label>
-								<input type="text" name="subdivision" id="inputSubdivision" value="Sample" class="form-control" value="">
+								<input type="text" name="subdivision" id="inputSubdivision" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Barangay *</label>
 								<select name="barangay" id="inputBarangay" class="form-control" required="required"  data-msg="">
-									<option value=""></option>
+									<option value="" SELECTED></option>
 									<?php foreach ($barangay->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -289,7 +300,7 @@
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Postal Code *</label>
-								<input type="text" name="postal_code" id="inputPostal_code" value="Sample" class="form-control" value="" required="required"  data-msg="">
+								<input type="text" name="postal_code" id="inputPostal_code" value="" class="form-control" value="" required="required"  data-msg="">
 							</div>
 						</div>
 					</div>
@@ -302,9 +313,9 @@
 							<div class="form-group textRegisterHome">
 								<label for="">Employment Status *</label>
 								<select name="employementStatus" id="inputEmployement_status" class="form-control" required="required">
-									<option value=""></option>
+									<option value="" SELECTED></option>
 									<?php foreach ($employement_status->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+										<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -312,21 +323,22 @@
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Company Name</label>
-								<input type="text" name="companyName" id="inputCompanyName" class="form-control" value="Sample">
+								<input type="text" name="companyName" id="inputCompanyName" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Position</label>
-								<input type="text" name="position" id="inputPosition" class="form-control" value="Sample">
+								<input type="text" name="position" id="inputPosition" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Country</label>
 								<select name="country" id="inputCountry" class="form-control">
+									<option value="" SELECTED></option>
 									<?php foreach ($country->result() as $key => $value) {  ?>
-										<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+											<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 									<?php } ?>
 								</select>
 							</div>
@@ -339,10 +351,10 @@
 									<?php foreach ($region->result() as $key => $value) {
 
 										if ($value->strRegCode=="13"){
-											echo "<option value=". $value->strRegCode .">" . $value->strDescription . "</option>";
+											echo "<option value=". $value->strRegCode ." SELECTED>" . $value->strDescription . "</option>";
 										}
 										else {
-											echo "<option value=". $value->strRegCode ." SELECTED>" . $value->strDescription . "</option>";
+											echo "<option value=". $value->strRegCode .">" . $value->strDescription . "</option>";
 										}
 									} ?>
 								</select>
@@ -372,25 +384,25 @@
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Floor / Unit No. / Bldg No.</label>
-								<input type="text" name="companyUnit" id="inputCompanyUnit" class="form-control" value="Sample">
+								<input type="text" name="companyUnit" id="inputCompanyUnit" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Street Name</label>
-								<input type="text" name="streetName" id="inputStreetName" class="form-control" value="Sample">
+								<input type="text" name="streetName" id="inputStreetName" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Postal Code</label>
-								<input type="text" name="companyPostalCode" id="inputCompanyPostalCode" class="form-control" value="Sample">
+								<input type="text" name="companyPostalCode" id="inputCompanyPostalCode" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Contact Number</label>
-								<input type="text" name="companyContact" id="inputCompanyContact" class="form-control" value="Sample">
+								<input type="text" name="companyContact" id="inputCompanyContact" class="form-control" value="">
 							</div>
 						</div>
 					</div>
@@ -402,37 +414,37 @@
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Home Phone Number</label>
-								<input type="text" name="homePhoneNumber" id="inputHomePhoneNumber" class="form-control" value="Sample" >
+								<input type="text" name="homePhoneNumber" id="inputHomePhoneNumber" class="form-control" value="" >
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Cellphone Number *</label>
-								<input type="text" name="cellPhoneNumber" id="inputcellPhoneNumber" class="form-control" required="required" value="Sample" >
+								<input type="text" name="cellPhoneNumber" id="inputcellPhoneNumber" class="form-control" required="required" value="" >
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Email Address</label>
-								<input type="text" name="emailAddress" id="inputemailAddress" class="form-control" value="Sample" >
+								<input type="text" name="emailAddress" id="inputemailAddress" class="form-control" value="" >
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Contact Person *</label>
-								<input type="text" name="contactPerson" id="inputcontactPerson" class="form-control" value="Sample" required="required" >
+								<input type="text" name="contactPerson" id="inputcontactPerson" class="form-control" value="" required="required" >
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Address of Contact Person *</label>
-								<input type="text" name="contactPersonAddress" id="inputcontactPersonAddress" class="form-control" value="Sample" required="required" >
+								<input type="text" name="contactPersonAddress" id="inputcontactPersonAddress" class="form-control" value="" required="required" >
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Contact Number *</label>
-								<input type="text" name="telephoneNumber" id="inputtelephoneNumber" class="form-control" value="Sample" required="required">
+								<input type="text" name="telephoneNumber" id="inputtelephoneNumber" class="form-control" value="" required="required">
 							</div>
 						</div>
 					</div>
@@ -444,85 +456,85 @@
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Spouse Maiden Name</label>
-								<input type="text" name="spouseMaidenName" id="inputSpouseMaidenName" class="form-control" value="Sample">
+								<input type="text" name="spouseMaidenName" id="inputSpouseMaidenName" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Spouse Date of Birth</label>
-								<input type="date" name="spouseBday" id="inputSpouseBday" class="form-control" value="Sample" data-msg="">
+								<input type="date" name="spouseBday" id="inputSpouseBday" class="form-control" value="" data-msg="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Father's Name</label>
-								<input type="text" name="fatherName" id="inputfatherName" class="form-control" value="Sample">
+								<input type="text" name="fatherName" id="inputfatherName" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Mother's Maiden Name</label>
-								<input type="text" name="motherName" id="inputmotherName" class="form-control" value="Sample">
+								<input type="text" name="motherName" id="inputmotherName" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 1</label>
-								<input type="text" name="child1" id="inputchildren1" class="form-control" value="Sample">
+								<input type="text" name="child1" id="inputchildren1" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 2</label>
-								<input type="text" name="child2" id="inputchild2" class="form-control" value="Sample">
+								<input type="text" name="child2" id="inputchild2" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 3</label>
-								<input type="text" name="child3" id="inputchild3" class="form-control" value="Sample">
+								<input type="text" name="child3" id="inputchild3" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 4</label>
-								<input type="text" name="child4" id="inputchild4" class="form-control" value="SAMPLE">
+								<input type="text" name="child4" id="inputchild4" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 5</label>
-								<input type="text" name="child5" id="inputchild5" class="form-control" value="SAMPLE">
+								<input type="text" name="child5" id="inputchild5" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 6</label>
-								<input type="text" name="child6" id="inputchild6" class="form-control" value="SAMPLE">
+								<input type="text" name="child6" id="inputchild6" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 7</label>
-								<input type="text" name="child7" id="inputchild7" class="form-control" value="SAMPLE">
+								<input type="text" name="child7" id="inputchild7" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 8</label>
-								<input type="text" name="child8" id="inputchild8" class="form-control" value="SAMPLE">
+								<input type="text" name="child8" id="inputchild8" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 9</label>
-								<input type="text" name="child9" id="inputchild9" class="form-control" value="SAMPLE">
+								<input type="text" name="child9" id="inputchild9" class="form-control" value="">
 							</div>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="form-group textRegisterHome">
 								<label for="">Children 10</label>
-								<input type="text" name="child10" id="inputchild10" class="form-control" value="SAMPLE">
+								<input type="text" name="child10" id="inputchild10" class="form-control" value="">
 							</div>
 						</div>
 					</div>
@@ -535,15 +547,15 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ctcShow">
 							<label for="">Date of Issue</label>
-							<input type="date" name="ctcDateIssue" id="inputCtcDateIssue" class="form-control ctcinput" value="2018-05-23" disabled>
+							<input type="date" name="ctcDateIssue" id="inputCtcDateIssue" class="form-control ctcinput" value="" disabled>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
 							<label for="">CTC No.</label>
-							<input type="text" name="ctcNo" id="inputCtcNo" class="form-control ctcinput" value="SAMPLE" disabled>
+							<input type="text" name="ctcNo" id="inputCtcNo" class="form-control ctcinput" value="" disabled>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ctcShow">
 							<label for="">Place of Issue</label>
-							<input type="text" name="placeIssue" id="inputCtcPlaceIssue" class="form-control ctcinput" value="SAMPLE" disabled>
+							<input type="text" name="placeIssue" id="inputCtcPlaceIssue" class="form-control ctcinput" value="" disabled>
 						</div>
 					</div>
 			
@@ -552,14 +564,15 @@
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sssShow">
 							<label for="">Type</label>
 							<select name="ssType" id="inputssType" class="form-control sssinput" disabled>
+								<option value="" selected></option>
 								<?php foreach ($ss_type->result() as $key => $value) {  ?>
-									<option value="<?=$value->cde?>" SELECTED><?=$value->descrip?></option>
+									<option value="<?=$value->cde?>"><?=$value->descrip?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sssShow">
 							<label for="">Social Security Number</label>
-							<input type="text" name="ssNumber" id="inputSsNumber" class="form-control sssinput" value="SAMPLE" disabled>
+							<input type="text" name="ssNumber" id="inputSsNumber" class="form-control sssinput" value="" disabled>
 						</div>
 					</div>
 				
@@ -567,7 +580,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 tinShow">
 							<label for="">TIN</label>
-							<input type="text" name="tinId" id="inputTinId" class="form-control tininput" value="SAMPLE" disabled>
+							<input type="text" name="tinId" id="inputTinId" class="form-control tininput" value="" disabled>
 						</div>
 					</div>
 				</div>
@@ -582,11 +595,11 @@
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cedulaShow">
 							<label for="">Barangay Number</label>
-							<input type="text" name="cedulaNumber" id="inputCedulaNumber" class="form-control brgyinput" value="SAMPLE" disabled>
+							<input type="text" name="cedulaNumber" id="inputCedulaNumber" class="form-control brgyinput" value="" disabled>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 cedulaShow">
 							<label for="">Place of Issue</label>
-							<input type="text" name="cedulaPlaceIssue" id="inputCedulaPlaceIssue" class="form-control brgyinput" value="SAMPLE" disabled>
+							<input type="text" name="cedulaPlaceIssue" id="inputCedulaPlaceIssue" class="form-control brgyinput" value="" disabled>
 						</div>
 					</div>
 				
@@ -594,7 +607,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 philhealthShow">
 							<label for="">PhilHealth Number</label>
-							<input type="text" name="philNumber" id="inputPhilNumber" class="form-control phinput" value="SAMPLE" disabled>
+							<input type="text" name="philNumber" id="inputPhilNumber" class="form-control phinput" value="" disabled>
 						</div>
 					</div>
 				
@@ -602,7 +615,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nsoShow">
 							<label for="">Registry Number</label>
-							<input type="text" name="nsoNumber" id="inputnsoNumber" class="form-control nsoinput" value="SAMPLE" disabled>
+							<input type="text" name="nsoNumber" id="inputnsoNumber" class="form-control nsoinput" value="" disabled>
 						</div>
 					</div>
 				</div>
@@ -613,7 +626,7 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 votersShow">
 							<label for="">ID Number</label>
-							<input type="text" name="voterNumber" id="inputvoterNumber" class="form-control votersinput" value="SAMPLE" disabled>
+							<input type="text" name="voterNumber" id="inputvoterNumber" class="form-control votersinput" value="" disabled>
 						</div>
 					</div>
 				
@@ -621,15 +634,15 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 passportShow">
 							<label for="">Date of Issue</label>
-							<input type="date" name="passportDateIssue" id="inputpassportDateIssue" class="form-control passportinput" value="2018-05-23" disabled>
+							<input type="date" name="passportDateIssue" id="inputpassportDateIssue" class="form-control passportinput" value="" disabled>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 passportShow">
 							<label for="">Passport Number</label>
-							<input type="text" name="passportNumber" id="inputpassportNumber" class="form-control passportinput" value="SAMPLE" disabled>
+							<input type="text" name="passportNumber" id="inputpassportNumber" class="form-control passportinput" value="" disabled>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 passportShow">
 							<label for="">Place Issue</label>
-							<input type="text" name="passportPlaceIssue" id="inputpassportPlaceIssue" class="form-control passportinput" value="SAMPLE" disabled>
+							<input type="text" name="passportPlaceIssue" id="inputpassportPlaceIssue" class="form-control passportinput" value="" disabled>
 						</div>
 					</div>
 				
@@ -637,11 +650,11 @@
 					<div class="row">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 nbiShow">
 							<label for="">Date of Issue</label>
-							<input type="date" name="nbiDateIssue" id="inputnbiDateIssue" class="form-control nbiinput" value="2018-05-23" disabled>
+							<input type="date" name="nbiDateIssue" id="inputnbiDateIssue" class="form-control nbiinput" value="" disabled>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 nbiShow">
 							<label for="">NBI Number</label>
-							<input type="text" name="nbiNumber" id="inputnbiNumber" class="form-control nbiinput" value="SAMPLE" disabled>
+							<input type="text" name="nbiNumber" id="inputnbiNumber" class="form-control nbiinput" value="" disabled>
 						</div>
 					</div>
 				</div>
@@ -1222,6 +1235,27 @@
 							</label>
 						</div>
 					</div>
+
+					<div class="row" id="insurance_preview">
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>Insurance Coverage</legend>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<label>
+								<strong>
+								<p class="text-uppercase" id="insurance1_preview">Accidental Death and Dismemberment</p>
+								</strong>
+							</label>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<label>
+								<strong>
+								<p class="text-uppercase" id="insurance2_preview">With Additional Coverage</p>
+								</strong>
+							</label>
+						</div>
+					</div>
+				</div>
 				</div>
 				
 			

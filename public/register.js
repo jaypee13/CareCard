@@ -422,6 +422,7 @@ function showUserDetails() {
 	showVotersDetails();
 	showPassportDetails();
 	showNbiDetails();
+	showInsuranceDetails();
 }
 
 function showPersonalDetails() {
@@ -611,6 +612,20 @@ function showNbiDetails() {
 	}
 }
 
+function showInsuranceDetails() {
+	$("#insurance_preview").show();
+	$("#insurance1_preview").hide();
+	$("#insurance2_preview").hide();
+	if ($('input[name="accidendatalDeath"]').is(":checked") === true) {
+		//$("#insurance1_preview").text("Accidental Death and Dismemberment");
+		$("#insurance1_preview").show();
+	}
+	if ($('input[name="additonalCoverage"]').is(":checked") === true) {
+		//$("#insurance2_preview").text("With Additional Coverage");
+		$("#insurance2_preview").show();
+	}
+}
+
 function hideDetails() {
 	$("#tax_preview").hide();
 	$("#nbi_preview").hide();
@@ -621,6 +636,7 @@ function hideDetails() {
 	$("#brgy_preview").hide();
 	$("#tin_preview").hide();
 	$("#sss_preview").hide();
+	$("#insurance_preview").hide();
 }
 
 
