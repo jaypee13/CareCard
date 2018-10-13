@@ -617,7 +617,7 @@ function hideDetails() {
 	$("#passport_preview").hide();
 	$("#voters_preview").hide();
 	$("#nso_preview").hide();
-	$("#ph_preview").hide();
+	$("#phDIv_preview").hide();
 	$("#brgy_preview").hide();
 	$("#tin_preview").hide();
 	$("#sss_preview").hide();
