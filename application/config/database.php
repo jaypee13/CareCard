@@ -21,9 +21,9 @@ $db['default'] = array(
 	
 
 	//OFFICE
-	//'hostname' => '172.25.9.126\SQLEXPRESS',
-	//'username' => 'super',
-	//'password' => 'john17:3',
+	// 'hostname' => '172.25.9.126\SQLEXPRESS',
+	// 'username' => 'super',
+	// 'password' => 'john17:3',
 	// 'database' => 'CareCard',
 
 	//HOUSE

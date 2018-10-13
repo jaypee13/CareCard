@@ -17,7 +17,7 @@
 			       		   where parname = 'CIVILSTAT' and cde = strCivilStat),'') AS [Civil], 
 				   CONVERT(VARCHAR(10), dteBirth, 101) AS [Birth], replace(replace(replace(isNull(strUnitBldg, '') + ' ' + isNull(strStreet, '') + ' ' + isNull(strSubdv, '') + ' ' + isNull(strBarangay, '') + ' ' + isNull(strPostal, ''),' ','<>'),'><',''),'<>',' ') as [Complete Address], 
 				   case when ISNULL(blSenior,0) = 0 then 'NO' ELSE 'YES' end AS [Senior?]
-				from tblConstituent where strLGUNo is not Null");
+				from tblConstituent");
 
 			$tmpCondition = "";
 			if (trim($strFullName) === ""){}
@@ -34,9 +34,11 @@
 				$tmpCondition = $tmpCondition . "id in (Select intConstID from tblConstituentDocu where isAddtlCov = 1) and ";
 			}
 
-			if (trim($tmpCondition) ===  ""){}
+			if (trim($tmpCondition) ===  ""){
+				$tmpCondition = "where strLGUNo is not Null";
+			}
 			ELSE {
-				$tmpCondition = "where " . substr($tmpCondition, 0, strLen($tmpCondition) - 5);	
+				$tmpCondition = "where strLGUNo is not Null and " . substr($tmpCondition, 0, strLen($tmpCondition) - 5);	
 			}
 			
 			

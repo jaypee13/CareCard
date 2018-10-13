@@ -33,7 +33,7 @@ class Register extends CI_Controller {
 			'strCivilStat'         => $inputtedData['civil_status'],
 			'dteBirth'	           => $inputtedData['birth_day'],
 			'strBirthPlace'        => $inputtedData['place_of_birth'],
-			'strCountry'           => 'PH',
+			'strCountry'           => $inputtedData['homeCountry'], 
 			'strNationality'       => 'FIL',
 			'strCitizenship'       => $inputtedData['citizenship'],
 			'strGender'		       => $inputtedData['gender'],
@@ -168,8 +168,8 @@ class Register extends CI_Controller {
 			$documents['isBrgyCertRes'] = $inputtedData['brgyCert'];
 		}
 
-		$documents['strProofBill1'] = $inputtedData['proof1'];
-		$documents['strProofBill2'] = $inputtedData['proof2'];
+		//$documents['strProofBill1'] = $inputtedData['proof1'];
+		//$documents['strProofBill2'] = $inputtedData['proof2'];
 
 		$documents['isAccidDeatDism'] = isset($inputtedData['accidendatalDeath']) ? 1 : 1;
 		$documents['isAddtlCov'] = isset($inputtedData['additonalCoverage']) ? 1 : 0;
@@ -220,7 +220,8 @@ class Register extends CI_Controller {
 	private function setUpperCase($data)
 	{
 		if (empty($data)) {
-			return $data;
+			//return $data;
+			return '';
 		}
 
 		foreach ($data as $key => $input) {

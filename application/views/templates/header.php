@@ -3,7 +3,8 @@
 <html lang="en">
 
   <head>
-   
+    
+    <link rel="icon" href="<?php echo base_url(); ?>favicon.png">
     <!-- Required meta tags -->
     <!-- <meta charset="utf-8" encoding="utf8"> -->
 
