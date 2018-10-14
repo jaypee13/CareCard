@@ -38,6 +38,11 @@
 				$this->load->view('templates/footer'); //load javascript sources
 			}
 			else {
+				$data['QueryOutputPayment'] = $this->constituents_model->get_information($strID, 'Payment');
+				if (empty($data['QueryOutputPayment'])){
+					//show_404();
+				}
+
 				$data['QueryPersonal'] = $this->constituents_model->get_information($strID, 'Personal');
 				if (empty($data['QueryPersonal'])){
 					//show_404();

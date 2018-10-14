@@ -50,7 +50,12 @@
 		  		?>
         		<!-- <img id="myImgBG" alt="<?php echo $QueryOutput['strFullName']; ?><br/>*** Signature ***" style = "height: 100%; width: 100%; display: block;" border=1 src="data:image/jpeg;base64,<?php echo base64_encode($QueryOutput["blbPhoto"]); ?>" alt="Card image"> -->
     		</div>
+    		<div class="card-header">
+    			<small class="post-date" style="">Coverage Period:&nbsp;<?php echo $QueryOutput['dteAdded'] . " - " . $QueryOutput['dteExpiration']; ?></small>
+    		</div>
 		</div>
+
+		
 
         <div class="card border-light mb-3" >
             <ul class="list-group list-group-flush">
@@ -81,8 +86,7 @@
                 <b>ADDRESS:</b> <?php echo $QueryOutput['strEmergAddress']; ?><br/>
                 <b>NUMBER:</b> <?php echo $QueryOutput['strEmergTelNo']; ?>
               </li>
-
-              <small class="post-date" style="padding-left: 20px; color: Gray;">Registed:&nbsp;<?php echo $QueryOutput['dteAdded']; ?></small>
+              
             </ul>
         </div>
 	</div>
@@ -181,6 +185,54 @@
 						}
 					?>
 					
+				</li>
+				<li class="list-group-item" style="min-height:32px; margin:0.1; padding:2px;background-color:#F0E68C;text-align: center; vertical-align: middle;">
+				Historical Payments</li>
+				<li class="list-group-item" style="margin:0.1; padding:1px;background-color:white;text-align: center; vertical-align: middle; display: flex; justify-content: center;">
+					<table class="table table-hover" style="padding: 0; margin:0.1; border:1;  min-width: 300px; background-color: white">
+					  <thead>
+					    <tr class="table-active">
+					<?php 
+			    		//HEADER OF TABLE
+						$string = "";
+						$intCount = 0;
+					    foreach ($QueryOutputPayment as $QryField){
+					    	if ($intCount == 1){
+						    	foreach($QryField as $key=>$val){
+						    		
+							    	//$string.="$key:$val,"; //this is field name and value
+							    	//$string.="$key, "; //field name only
+						    		echo "<th scope='col' class='table-header' style='padding: 0; margin:0.1; text-align: center; border: 1px solid lightgray'>".strtoupper($key)."</th>";	
+							    }	
+					    	
+					    	}
+					    	$intCount = $intCount + 1;
+					    }
+
+
+					    		echo "</tr>";
+	  						echo "</thead>";
+	  						echo "<tbody>";
+
+						    //CONTENTS OF TABLE
+						$intCount = 0;
+					    foreach ($QueryOutputPayment as $QryField){
+					    	echo "<tr>";
+					    	foreach($QryField as $key=>$val){
+				    			if ($intCount == 0){
+							    	//echo "<th scope='row'>".$val."</th>";}
+							    	echo "<td style='padding: 0; margin:0.1; border: 1px solid lightgray'>".strtoupper($val)."</td>";}
+							    else {
+							    	echo "<td style='padding: 0; margin:0.1; border: 1px solid lightgray'>".strtoupper($val)."</td>";}
+								$intCount = $intCount + 1;    
+						    }	
+						    $intCount = 0; 
+						    echo "</tr>";
+						}
+
+					?>
+						</tbody>
+					</table> 
 				</li>
 			</ul>
 		</div>

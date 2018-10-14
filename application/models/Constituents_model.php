@@ -53,11 +53,17 @@
 			if ($tmpType === "Main"){
 				$tmpQuery= ("select strFullName, CONVERT(VARCHAR(10), dteBirth, 101) as dteBirth, strGender, isNull((select descrip from PRMList where parname = 'BLOOD' and cde = strBloodType), '') as strBloodType, intHeight, dblWeight, strHomePhone, strCellphone, strEmailAdd, isAccidDeatDism, isAddtlCov, strEmergContName, strEmergAddress, strEmergTelNo, 
 					replace(replace(replace(isNull(strUnitBldg, '') + ' ' + isNull(strStreet, '') + ' ' + isNull(strSubdv, '') + ' ' + isNull(strBarangay, '') + ' ' + isNull(strPostal, ''),' ','<>'),'><',''),'<>',' ') as [strAddress], (Select top 1 blbPhoto from tblPhoto where intConstID = C.id) as blbPhoto,
-					isNull(strBirthPlace, '') as [Place of Birth], isNull(CONVERT(VARCHAR(10), C.dteAdded, 101), '') as dteAdded, strLGUNo
+					isNull(strBirthPlace, '') as [Place of Birth], isNull(CONVERT(VARCHAR(10), C.dteAdded, 101), '') as dteAdded, isNull(CONVERT(VARCHAR(10), DateAdd(YY,3,C.dteAdded), 101), '') as dteExpiration, strLGUNo
 				from tblConstituent C left join tblConstituentDocu CD  on C.ID = CD.intConstID where cast(C.strLGUNo as numeric) = " . $tmpID . "");
 				$query = $this->db->query($tmpQuery);
 				return $query;
 				//return $query->row_array();
+			}
+			else if ($tmpType === "Payment"){
+				$tmpQuery= ("select dteAdded as [Payment Date], dblAmount as [Amount]
+				from tblPayment where intConstID in (Select id from tblConstituent where cast(strLGUNo as numeric) = " . $tmpID . ")");
+				$query = $this->db->query($tmpQuery);
+				return $query->result_array();
 			}
 			else if ($tmpType === "Personal"){
 				$tmpQuery= ("select  
