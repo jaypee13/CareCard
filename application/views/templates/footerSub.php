@@ -24,6 +24,7 @@
 	      		</tr>
 	        </table>
 	      </div>
+	  	</form>
 	</div>
 	
 	<script src="<?php echo base_url(); ?>public\otherpublic\login.js"></script>

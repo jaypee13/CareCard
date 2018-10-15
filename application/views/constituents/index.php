@@ -20,6 +20,18 @@
         width: 100%;
     }
 }
+
+.leftButton{
+position:inherit;
+vertical-align: top;
+z-index:1;
+}
+
+.rightButton{
+position:inherit;
+vertical-align: top;
+}
+
 </style>
 
 <?php
@@ -63,8 +75,7 @@
 
 ?>
 
-
-<h4><?php echo $title; ?></h4>	
+<h4><?php echo $title; ?>&nbsp;&nbsp;&nbsp;<a href="#" style="font-size: 20px;" ="text3" onclick="document.getElementById('idSMS').style.display ='block';">(Text Blast)</a></h4>
 <div class="container-fluid">
 	<form method="post" action="<?php echo site_url('constituents/find'); ?>" style="max-width: 100%; " class="center-div">
 		<div class="row center-div">
@@ -96,9 +107,12 @@
 				?>
 			    </select>
 			</div>
+			
 			<div class="column text2" style="background-color:#bbb;  width: 200px; height: 75px;">
 				<button style="height: 28px; text-align: center; line-height: 10px; vertical-align: middle;" class="btn btn-secondary my-2 my-sm-0 imgCenter" type="submit" style="width: 100%">Search</button>
 			</div>
+
+			
 		</div>
 	</form>
 	
@@ -164,4 +178,30 @@
 		</tbody>
 	</table> 
 	</div>
+</div>
+
+<div id="idSMS" class="modal">
+    <form method="post" class="modal-content animate" action="" style="max-width:500px">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('idSMS').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <img src="<?php echo base_url(); ?>public\images\SMS.png" style="height:80px; width:80px" alt="Avatar" class="avatar">
+      </div>
+      <div class="container">
+      	<center><small><b>* Send Txt Announcement to All/Selected Registered Constituents</b></small>
+      	</center><br/>
+
+      	<table border="0" style="width: 100%">
+      		<tr style="text-align: middle">
+      			<td style="width: 100%">
+      				<textarea style="width: 100%" class="text3" rows="5" cols="64" name="comment" placeholder="Enter Announcement Here..."></textarea>
+      			</td>
+      		</tr>
+      		<tr>
+      			<td style="width: 100%"></td>
+      		</tr>
+      		<tr>
+      			<td style="width: 100%" align="Right"><button type="submit" style="width: 150px">Send SMS</button></td>
+      		</tr>
+        </table>
+      </div>
 </div>

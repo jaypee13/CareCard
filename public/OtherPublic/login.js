@@ -1,9 +1,15 @@
 var modal = document.getElementById('id01');
 var modal2 = document.getElementById('idSearch');
+var modal3 = document.getElementById('idSMS');
 window.onclick = function(event) {
-if (event.target == modal || event.target == modal2) {
-    modal.style.display = "none";
+if (event.target == modal) {
+    modal.style.display = "none";}
+
+if (event.target == modal2) {
     modal2.style.display = "none";}
+
+if (event.target == modal3) {
+    modal3.style.display = "none";}
 }
 
 
