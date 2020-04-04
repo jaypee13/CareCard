@@ -6,10 +6,4 @@
 			$this->db->update('tblUser', $data);
 			
 		}
-
-		public function Update_ConstPwd($user,$data){
-			$this->db->where('strLGUNo', $user);
-			$this->db->update('tblConstituent', $data);
-			
-		}
 	}

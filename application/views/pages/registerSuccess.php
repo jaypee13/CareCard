@@ -15,7 +15,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<ul style="margin:20px">
 							<li>Control Number : <?php echo $this->input->get('lgu')?></li>
-							<li>Please take note of this Control Number and bring at least 2 valid ID's on your visit to the Municipal Card Center</li>
+							<li>Please take note of this Control Number and bring at least 1 valid ID on your visit to the Municipal Card Center</li>
 						</ul>
 					</div>
 				</div>

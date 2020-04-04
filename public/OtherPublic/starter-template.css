@@ -343,6 +343,12 @@ background-color: rgb(230, 230, 230);
    color: rgb(230, 230, 230);
 }
 
+.ahref-disabled3 {
+   pointer-events: none;
+   cursor: default;
+   color: darkgray;
+}
+
 .ahref-disabled2 {
    pointer-events: none;
    cursor: default;
@@ -353,6 +359,12 @@ background-color: rgb(230, 230, 230);
    pointer-events: auto;
    cursor: pointer;
    color: black;
+}
+
+.ahref-enabled2 {
+   pointer-events: auto;
+   cursor: pointer;
+   color: white;
 }
 
 div.centerDiv {
@@ -373,4 +385,15 @@ ul.centerUL {
 .centerUL li {
     display: inline;
     text-align: center;
+}
+
+div.wrapper {
+    width: 300px;
+    height:300px;
+    border:1px solid black;
+}
+
+input[type="text"] {
+     display: block;
+     margin : 0 auto;
 }

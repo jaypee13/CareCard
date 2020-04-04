@@ -661,28 +661,6 @@
 										
 				<div class="registrationtab" id="insurancetab" data-prev="voterstab" data-next="previewtab" data-active="false">
 					<LABEL class="textHome1">&nbsp;&nbsp;INSURANCE COVERAGE TO AVAIL&nbsp;<font color='darkgray'>&nbsp;(For Non-Members Only)</font></LABEL>
-					<!-- <LABEL class="textHome1">&nbsp;&nbsp;<input type="checkbox" value="1" name="brgyCert">With Proof of Billing?</LABEL>
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyCertShow">
-							<label for="">Proof of Billing 1</label>
-							<select name="proof1" id="proof1" class="form-control" >
-								<option value=""></option>
-								<?php foreach ($proof_bill->result() as $key => $value) {  ?>
-									<option value="<?=$value->cde?>"><?=$value->descrip?></option>
-								<?php } ?>
-							</select>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 brgyCertShow">
-							<label for="">Proof of Billing 2</label>
-							<select name="proof2" id="proof2" class="form-control">
-								<option value=""></option>
-								<?php foreach ($proof_bill->result() as $key => $value) {  ?>
-									<option value="<?=$value->cde?>"><?=$value->descrip?></option>
-								<?php } ?>
-							</select>
-						</div>
-					</div> -->
-					<!-- <LABEL class="textHome1">&nbsp;&nbsp;Insurance Coverage To Avail</LABEL> -->
 					<div class="row">
 						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 							<div class="checkbox">
@@ -699,6 +677,13 @@
 									Additional Insurance Coverage (See List @ the Care Card Center)
 								</label>
 							</div>
+						</div>
+					</div>
+					<LABEL class="textHome1">&nbsp;&nbsp;SCHEDULE APPOINTMENT DATE TO CARE CARD CENTER</LABEL>
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 visitShow">
+							<label for="">Date Of Visit</label>
+							<input type="date" name="visitDate" id="inputVisitDate" value="" class="form-control" required="required"  data-msg="">
 						</div>
 					</div>
 				</div>
@@ -758,6 +743,7 @@
 								<p class="text-uppercase" id="birth_day_preview"></p>
 							</div>
 						</div>
+
 						<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 							<div class="form-group">
 								<label for=""><strong>Place of Birth</strong></label>
@@ -1251,6 +1237,16 @@
 							<label>
 								<strong>
 								<p class="text-uppercase" id="insurance2_preview">With Additional Coverage</p>
+								</strong>
+							</label>
+						</div>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<legend>Scheduled Appointment Date</legend>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+							<label>
+								<strong>
+								<p class="text-uppercase" id="scheduleDate_preview"></p>
 								</strong>
 							</label>
 						</div>

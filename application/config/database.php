@@ -7,11 +7,10 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	//GODADDY WEBSERVER
-	'hostname' => '132.148.148.238\MSSQLSERVER2014',
-	'username' => 'JMSSilang',
-	'password' => 'John17:3@',
-	'database' => 'SilangCard',
-	// 'database' => 'CareCard',
+	// 'hostname' => '132.148.148.238\MSSQLSERVER2014',
+	// 'username' => 'JMSAdmin',
+	// 'password' => 'John17:3@',
+	// 'database' => 'POS',
 
 	//AZURE WEBSERVER
 	// 'hostname' => 'tcp:jms.database.windows.net,1433',
@@ -24,13 +23,13 @@ $db['default'] = array(
 	// 'hostname' => '172.25.9.126\SQLEXPRESS',
 	// 'username' => 'super',
 	// 'password' => 'john17:3',
-	// 'database' => 'CareCard',
+	// 'database' => 'POS',
 
 	//HOUSE
-	// 'hostname' => 'JMS-PC\SQLEXPRESS',
-	// 'username' => 'sa',
-	// 'password' => 'john17:3',
-	// 'database' => 'CareCard',
+	'hostname' => 'JMS-PC\SQLEXPRESS',
+	'username' => 'sa',
+	'password' => 'john17:3',
+	'database' => 'POS',
 
 	//MARK
 	// 'hostname' => 'DESKTOP-1ROJ555',

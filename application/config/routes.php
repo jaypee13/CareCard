@@ -1,15 +1,16 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$route['constituents/reload'] = 'constituents/reload';
-$route['constituents/find'] = 'constituents/find';
-$route['constituents/(:any)'] = 'constituents/view/$1'; //loads all pages in Posts with this URL as the initial
-$route['constituents'] = 'constituents/index';
+$route['pos/reload'] = 'pos/reload';
+$route['pos/find'] = 'pos/find';
+$route['pos/salesmon'] = 'pos/salesmon';
+$route['pos/(:any)'] = 'pos/view/$1'; //loads all pages in Posts with this URL as the initial
+$route['pos'] = 'pos/index';
 $route['posts/(:any)'] = 'posts/view/$1'; //loads all pages in Posts with this URL as the initial
 $route['posts'] = 'posts/index';
 $route['default_controller'] = 'pages/view'; //loads Pages.php as default
 $route['(:any)'] = 'pages/view/$1'; //loads all pages with this URL as the initial
-//$route['(:any)'] = 'constituents/view/$1'; //loads all pages with this URL as the initial
+//$route['(:any)'] = 'pos/view/$1'; //loads all pages with this URL as the initial
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

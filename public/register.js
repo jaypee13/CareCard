@@ -435,6 +435,7 @@ function showPersonalDetails() {
 		$("#inputCivil_status option:selected").text()
 	);
 	$("#birth_day_preview").text($('input[name="birth_day"]').val());
+	$("#scheduleDate_preview").text($('input[name="visitDate"]').val());
 	$("#place_of_birth_preview").text($('input[name="place_of_birth"]').val());
 	$("#citizenship_preview").text($("#inputCitizenship option:selected").text());
 	$("#gender_preview").text($("#inputGender option:selected").text());
@@ -451,7 +452,8 @@ function showPersonalDetails() {
 
 	console.log($('input[name="senior"]').val());
 
-	if ($('input[name="senior"]:checked').val() == "0") {
+	// if ($('input[name="senior1"]').is(":checked") === false) {
+	if ($('input[name="senior"]:checked').val() === "0") {
 		$("#senior_preview").text("No");
 		$("#seniorCitizenNumber_preview").hide();
 	} else {

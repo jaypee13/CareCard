@@ -8,7 +8,7 @@ header('Content-Type: text/html; charset=utf-8');
             //there is login session
             $loggedUser = $_SESSION['user'];
             $loginTime = $_SESSION['tmpLogtime'];
-            $UserLevel = $_SESSION['intLevel'];
+            $UserLevel = $_SESSION['strLevel'];
 
             //echo time().' - '.$loginTime.' - '.$loggedUser. ' - ' . $UserLevel;
 
@@ -18,7 +18,7 @@ header('Content-Type: text/html; charset=utf-8');
                     unset($_SESSION['user']);
                     unset($_SESSION['username']);
                     unset($_SESSION['tmpLogtime']);
-                    unset($_SESSION['intLevel']);
+                    unset($_SESSION['strLevel']);
                     unset($_SESSION['tmpSessName']);
                     unset($_SESSION['tmpSessIDNo']);
                     unset($_SESSION['tmpSessCoverage']);
@@ -31,7 +31,7 @@ header('Content-Type: text/html; charset=utf-8');
                 $_SESSION['tmpLogtime'] = time();}
         }
         if( isset($_SESSION['expiredsess']) ){ 
-            $tmpMessage = "<br/>";
+            $tmpMessage = "";//"<br/>";
             if ($loggedUser == "invalid") {
                 $tmpMessage = "<br/>Invalid Login Attempt. ";
             }
@@ -41,7 +41,7 @@ header('Content-Type: text/html; charset=utf-8');
                 if ($loggedUser != "invalid") {
                     $tmpMessage = $tmpMessage . "Please Login To Access This Menu.";
                 }
-                echo "<br/><div class='container-fluid'><label id='welcome_label' style='color:red; font-style: italic;'>" . $tmpMessage . "</label></div>";
+                echo "<div class='container-fluid' style=''><label id='welcome_label' style='color:red; font-style: italic;'>" . $tmpMessage . "</label></div>";
                 unset($_SESSION['expiredsess']);
             }
             else if ($ExpiredSession == "NotAdmin") {

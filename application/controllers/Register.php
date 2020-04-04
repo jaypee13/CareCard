@@ -29,7 +29,7 @@ class Register extends CI_Controller {
 			'strMidName'           => $inputtedData['middle_name'],
 			'strLastName'          => $inputtedData['last_name'],
 			'strSuffix'	           => $inputtedData['suffix'],
-			'strFullName'          => $inputtedData['first_name'] . ' ' . $inputtedData['last_name'],
+			'strFullName'          => $inputtedData['first_name'] . ' ' . $inputtedData['middle_name'] . ' ' . $inputtedData['last_name'],
 			'strCivilStat'         => $inputtedData['civil_status'],
 			'dteBirth'	           => $inputtedData['birth_day'],
 			'strBirthPlace'        => $inputtedData['place_of_birth'],
@@ -44,7 +44,7 @@ class Register extends CI_Controller {
 			'strEyesColor'	       => $inputtedData['eyesColor'],
 			'strOtherFeat'         => $inputtedData['otherFeature'],
 			'blSenior'		       => isset($inputtedData['senior']) ? (bool) $inputtedData['senior'] : '',
-			'strSeniorNum'         => $inputtedData['seniorCitizenNumber'],
+			'strSeniorNum'         => isset($inputtedData['seniorCitizenNumber']) ? $inputtedData['seniorCitizenNumber'] : '',
 			'strUnitBldg'	       => $inputtedData['unitNo'],
 			'strStreet'		       => $inputtedData['numberStreet'],
 			'strSubdv'		       => $inputtedData['subdivision'],
@@ -86,6 +86,7 @@ class Register extends CI_Controller {
 			'strStat'			   => 'PEN',
 			'dteAdded'			   => $dteServer,
 			'strUser'			   => 'ONLINE',
+			'dteVisit'		  	   => $inputtedData['visitDate'],
 			// 'strLGUNo'			   => '',
 			'strCtrlNo'			   => $ctrlno
 		);

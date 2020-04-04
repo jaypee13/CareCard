@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>public\OtherPublic\styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Care Card</title>   
+    <title>DGM</title>   
 
     <style type="text/css">
       { margin: 0; padding: 0; }
@@ -73,6 +73,12 @@
 
     .HeaderMenu {
         color: white;
+        font-size: 14px;
+        /*font-weight: bold;*/
+    }
+
+    .HeaderMenu2 {
+        font-size: 14px;
         /*font-weight: bold;*/
     }
 
@@ -95,7 +101,7 @@
           <a class="navbar-brand" href="" class="">
               <img src="<?php echo base_url(); ?>public\images\silangseal.png" style="margin: 0px; padding: 0px;" >
           </a>
-          <a class="navbar-toggler navbar-toggler-right collapsed nav-menu" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation" style="width: 60px; text-align: center; height: 50px">
+          <a class="navbar-toggler navbar-toggler-right collapsed nav-menu" data-toggle="collapse" data-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation" style="width: 50px; text-align: center; height: 40px">
               <img class="center-div2" src="<?php echo base_url(); ?>public\images\dropdown.png" style="text-align: center;">
               <!-- <span class="navbar-toggler-icon " ></span> -->
           </a>
@@ -109,19 +115,11 @@
               <li class="nav-item active">
                 <a class="nav-link HeaderMenu" href="<?php echo base_url(); ?>home">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item dropdown active">
-                <a class="nav-link dropdown-toggle HeaderMenu" id="dropdown02" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Membership</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown02">
-                  <a class="dropdown-item" href="<?php echo base_url(); ?>Benefits">Benefits</a>
-                  <a id="mnuConst" class="dropdown-item ahref-disabled" href="<?php echo base_url(); ?>constituents">Constituents</a>
-                  <a class="dropdown-item" href="<?php echo base_url(); ?>FAQs">FAQs</a>
-                </div>
-              </li>
               <li class="nav-item active">
                 <a class="nav-link HeaderMenu" href="<?php echo base_url(); ?>ContactUs">Contact Us</a>
               </li>
               <li class="nav-item active">
-                <a href="<?php echo base_url() ?>register" class="nav-link HeaderMenu">Register</a>
+                <a id="mnuConst" href="<?php echo base_url() ?>pos" class="nav-link HeaderMenu2 ahref-disabled3">Sales Monitoring</a>
               </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -130,7 +128,7 @@
                 <ul class="navbar-nav mr-auto">
                 <li class="nav-item dropdown active">
                     <?php $UserName = $this->session->userdata('username'); 
-                          $UserLevel = $this->session->userdata('intLevel'); 
+                          $UserLevel = $this->session->userdata('strLevel'); 
                     ?>
                     <a class="nav-link dropdown-toggle" id="dropdown03" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       <?php if ($UserName == "" || $UserName == "invalid") { ?>
@@ -147,7 +145,7 @@
                             <?php $this->session->unset_userdata('user');  
                             $this->session->unset_userdata('username'); 
                             $this->session->unset_userdata('tmpLogtime'); 
-                            $this->session->unset_userdata('intLevel');  ?> 
+                            $this->session->unset_userdata('strLevel');  ?> 
                         <?php }else { ?>
                               <a id="mnuPartnerLogin" class="dropdown-item" href="<?php echo site_url('Login/logout'); ?>" onclick="return confirm('Do you want to logout?')">Logout <?php echo ucwords(strtolower($UserName)); ?></a>
                         <?php } ?>
@@ -158,10 +156,11 @@
                         
                     <a id="mnuPassword" class="dropdown-item ahref-disabled" href="<?php echo base_url(); ?>password">Change Password</a>
 
-                    <?php if ($UserLevel == ""){ ?>
+                    
+                    <?php if ($UserName == "" || $UserName == "invalid") { ?>
                         <script>
-                          document.getElementById('mnuConst').classList.remove('ahref-enabled');
-                          document.getElementById('mnuConst').classList.add('ahref-disabled');
+                          document.getElementById('mnuConst').classList.remove('ahref-enabled2');
+                          document.getElementById('mnuConst').classList.add('ahref-disabled3');
                           document.getElementById('mnuPassword').classList.remove('ahref-enabled');
                           document.getElementById('mnuPassword').classList.add('ahref-disabled');
                           document.getElementById('mnuUserPrf').classList.remove('ahref-enabled');
@@ -169,8 +168,8 @@
                         </script>
                     <?php } else { ?>
                         <script>
-                          document.getElementById('mnuConst').classList.remove('ahref-disabled');
-                          document.getElementById('mnuConst').classList.add('ahref-enabled');
+                          document.getElementById('mnuConst').classList.remove('ahref-disabled3');
+                          document.getElementById('mnuConst').classList.add('ahref-enabled2');
                           document.getElementById('mnuPassword').classList.remove('ahref-disabled');
                           document.getElementById('mnuPassword').classList.add('ahref-enabled');
                           document.getElementById('mnuUserPrf').classList.remove('ahref-disabled');
@@ -184,8 +183,7 @@
             </form>
           </div>
         </nav>
-
       </div>
-    <nav class="navbar navbar-default"></nav> 
+    <!-- <nav class="navbar navbar-default"></nav>  -->
     <div class="container-fluid">
         
